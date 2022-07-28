@@ -7,24 +7,6 @@ class BaseController extends CI_Controller {
         parent::_construct();
     }
     public function index(){
-        $this->load->library('user_agent');
-        $data['browser'] = $this->agent->browser();
-        $data['browser_version'] = $this->agent->version();
-        $data['os'] = $this->agent->platform();
-        $data['ip_address'] = $this->input->ip_address();
-        $this->CommonModel->do_insert('t_visiter_detls', $data);
-
-        $page_data['CompanyInfo'] = $this->db->get_where('t_company_details')->row(); 
-        $page_data['t_announcement'] = $this->db->get_where('t_news_announcement',array('Status'=>'Active'))->result_array();
-        $page_data['t_imagecategory'] = $this->db->get_where('t_category_master',array('Status'=>'Active'))->result_array();
-        $page_data['t_imageslider'] = $this->db->get_where('t_image_slider',array('Status'=>'Active'))->result_array();
-        $page_data['t_downloads'] = $this->db->get_where('t_downloads',array('Status'=>'Active'))->result_array();
-        
-        $page_data['category_list'] = $this->CommonModel->get_active_category_list();
-
-        $query ="SELECT COUNT(Id) AS IdCount FROM `t_visiter_detls`";
-        $page_data['IdCount'] = $this->db->query($query)->row(); 
-
         $this->load->view('web/index',$page_data);
     }
     function loadpage($param1="",$param2=""){
