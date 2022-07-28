@@ -11,7 +11,7 @@
         <input type="checkbox" id="side-menu" class="hide">
         <div class="menu">
             <label for="side-menu" class="menu">
-                <img src="../NavPage/hambar.png" alt="">
+                <img src="<?php echo base_url();?>upload/hambar.png" alt = "hamburger menu">
                 <p>Menu</p>
             </label>
         </div>
@@ -19,7 +19,7 @@
         <div class="nav-menu-header">
             <div class="logo">
                 <a href="../home/home.html">
-                    <img src="../NavPage/logo.png" alt="Mhss_logo">
+                    <img src="<?php echo base_url();?>upload/logo.png" alt="Mhss_logo">
                 </a>
                 <a href="../home/home.html">
                     <p>Motithang Higher Secondary School</p>
@@ -29,7 +29,7 @@
             <div class=" close">
                 <label for="side-menu" class = "menu">
                     <p >Close</p>
-                    <img src="../NavPage/close.png" alt="">
+                    <img src="<?php echo base_url();?>upload/close.png" alt="">
                 </label>
                 
             </div>
@@ -58,19 +58,19 @@
                     <div class="non-academic-links">
                         <label for="role" class = "role">Role</label>
                         <a href="">Policy</a>
-                        <a href="../Alumni/alumni.html">Alumini</a>
+                        <a href="index.php?baseController/loadpage/alumni/')">Alumini</a>
                     </div>
                     <div class="academic-links">
-                        <a href="../result/result.html">Results</a>
+                        <a href="index.php?baseController/loadpage/result/')">Results</a>
                         <a href="">Download</a>
                         <a href="">Academic Toppers</a>
                         <a href="../">Academic Calender</a>
                     </div>
                     <div class="about-us-links">
-                        <a href="../about/about.html">About Motithang</a>
-                        <a href="../Staff Profile/staffprofile.html">Staff Proflie</a>
+                        <a href="index.php?baseController/loadpage/aboutus/')">About Motithang</a>
+                        <a href="index.php?baseController/loadpage/staffprofiles/')">Staff Proflie</a>
                         <a href="index.php?baseController/loadpage/history/')">History</a>
-                        <a href="../countryTopper/countrytopper.html">Country Toppers</a>
+                        <a href="index.php?baseController/loadpage/countrytopper/')">Country Toppers</a>
                     </div>
                 </div>
                 <div class="nav-sublink-container">
@@ -92,8 +92,8 @@
                     </div>
                     <div class="nav-link-container">
                         <div class="announcement-links">
-                            <a href="../newsEvents/NewsEvents.html">News and Events</a>
-                            <a href="../announcements/announcement.html">Announcements</a>
+                            <a href="index.php?baseController/loadpage/NewsEvent/')">News and Events</a>
+                            <a href="index.php?baseController/loadpage/announcement/')">Announcements</a>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                                 </div>
                             </div>
                             <a href="">Policy</a>
-                            <a href="../Alumni/alumni.html">Alumini</a>
+                            <a href="index.php?baseController/loadpage/alumni/')">Alumini</a>
                         </div>
                     </div>
                 </div>
@@ -126,9 +126,9 @@
                     </div>
                     <div class="nav-link-container">
                         <div class="academic-links">
-                            <a href="../result/result.html">Results</a>
+                            <a href="index.php?baseController/loadpage/result/')">Results</a>
                             <a href="">Download</a>
-                            <a href="">Academic Toppers</a>
+                            <a href="index.php?baseController/loadpage/academictopper/')">Academic Toppers</a>
                             <a href="">Academic Calender</a>
                         </div>
 
@@ -140,16 +140,16 @@
                     </div>
                     <div class="nav-link-container">
                         <div class="about-us-links">
-                            <a href="../about/about.html">About Motithang</a>
-                            <a href="../Staff Profile/staffprofile.html">Staff Proflie</a>
-                            <a href="../history/history.html">History</a>
-                            <a href="../countryTopper/countrytopper.html">Country Toppers</a>
+                            <a href="index.php?baseController/loadpage/aboutus/')">About Motithang</a>
+                            <a href="index.php?baseController/loadpage/staffprofiles/')">Staff Proflie</a>
+                            <a href="index.php?baseController/loadpage/history/')">History</a>
+                            <a href="index.php?baseController/loadpage/countrytopper/')">Country Toppers</a>
                         </div>
                     </div>
                 </div>
                 <div class="contact-us">
                     <div class="label-container">
-                        <a href="../contactUs/contact.html">Contact Us</a>
+                        <a href="index.php?baseController/loadpage/contactus/')">Contact Us</a>
                     </div>
                 </div>
             </div>

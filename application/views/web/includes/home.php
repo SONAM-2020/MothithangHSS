@@ -17,7 +17,7 @@
                 <div class="auto-slide4"></div>
             </div>
             <div class="slider first-slide">
-                <img src="slider1.png" alt="">
+                <img src="<?php echo base_url();?>upload/slider1.png" alt="">
                 <div class="slider-content">
                     <h1>STAY UPDATED</h1>
                     <p class = "home-center">Keep up to date with the latest events, news and announcements</p>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="slider">
-                <img src="slider2.png" alt="">
+                <img src="<?php echo base_url();?>upload/slider2.png" alt="">
                 <div class="slider-content">
                     <h1>EVERY DAY</h1>
                     <p class = "home-center">We strive to uphold THA-DAMTSE and LAY-JUM-DERY while upholding a nurturing enviroment</p>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="slider">
-                <img src="slider3.png" alt="">
+                <img src="<?php echo base_url();?>upload/slider3.png" alt="">
                 <div class="slider-content">
                     <h1>WE BELIEVE</h1>
                     <p class = "home-center">In leading by example, having a strong sense of belonging and prioritizing mental health.</p>
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="slider">
-                <img src="slider4.png" alt="">
+                <img src="<?php echo base_url();?>upload/slider4.png" alt="">
                 <div class="slider-content">
                     <h1>ACADEMICS</h1>
                     <p class = "home-center">View the academic toppers of the year, get access to your results or download past papers</p>
@@ -145,7 +145,7 @@
                         <div class="head"></div>
                         <div class="image-container">
                             <div class="image">
-                                <img src="../Staff Profile/images/chairperson.jpg" alt="Dasho Pema Jungney">
+                                <img src="<?php echo base_url();?>upload/chairperson.jpg" alt="Dasho Pema Jungney">
                             </div>
                         </div>
                         <div class="details">
@@ -161,7 +161,7 @@
                     <div class="head"></div>
                     <div class="image-container">
                         <div class="image">
-                            <img src="../Staff Profile/images/sonam.jpg" alt="Dasho SONAM PENJOR">
+                            <img src="<?php echo base_url();?>upload/sonam.jpg" alt="Dasho SONAM PENJOR">
                         </div>
                     </div>
                     <div class="details">
@@ -177,7 +177,7 @@
                     <div class="head"></div>
                     <div class="image-container">
                         <div class="image">
-                            <img src="../Staff Profile/images/jigme choden.jpg" alt="Jigme Choden">
+                            <img src="<?php echo base_url();?>upload/jigme choden.jpg" alt="Jigme Choden">
                         </div>
                     </div>
                     <div class="details">
@@ -193,7 +193,7 @@
                     <div class="head"></div>
                     <div class="image-container">
                         <div class="image">
-                            <img src="../Staff Profile/images/tshering zam.jpg" alt="Tshering zam">
+                            <img src="<?php echo base_url();?>upload/tshering zam.jpg" alt="Tshering zam">
                         </div>
                     </div>
                     <div class="details">
@@ -209,7 +209,7 @@
                     <div class="head"></div>
                     <div class="image-container">
                         <div class="image">
-                            <img src="../Staff Profile/images/Tshering zangmo.jpg" alt="Tshering Zangmo">
+                            <img src="<?php echo base_url();?>upload/Tshering zangmo.jpg" alt="Tshering Zangmo">
                         </div>
                     </div>
                     <div class="details">
@@ -225,7 +225,7 @@
                     <div class="head"></div>
                     <div class="image-container">
                         <div class="image">
-                            <img src="../Staff Profile/images/jambay.jpg" alt="jambay">
+                            <img src="<?php echo base_url();?>upload/jambay.jpg" alt="jambay">
                         </div>
                     </div>
                     <div class="details">
@@ -241,7 +241,7 @@
                     <div class="head"></div>
                     <div class="image-container">
                         <div class="image">
-                            <img src="../Staff Profile/images/sangay.jpg" alt="Sangay">
+                            <img src="<?php echo base_url();?>upload/sangay.jpg" alt="Sangay">
                         </div>
                     </div>
                     <div class="details">
@@ -257,7 +257,7 @@
                     <div class="head"></div>
                     <div class="image-container">
                         <div class="image">
-                            <img src="../Staff Profile/images/Bishlal Biswa.jpg" alt="Bishlal">
+                            <img src="<?php echo base_url();?>upload/Bishlal Biswa.jpg" alt="Bishlal">
                         </div>
                     </div>
                     <div class="details">
@@ -273,7 +273,7 @@
                     <div class="head"></div>
                     <div class="image-container">
                         <div class="image">
-                            <img src="../Staff Profile/images/sippy parjule.jpg" alt="Sippy Parjuli">
+                            <img src="<?php echo base_url();?>upload/sippy parjule.jpg" alt="Sippy Parjuli">
                         </div>
                     </div>
                     <div class="details">
@@ -305,7 +305,7 @@
                     <div class="head"></div>
                     <div class="image-container">
                         <div class="image">
-                            <img src="../Staff Profile/images/sc.jpg" alt="Sonam Choden">
+                            <img src="<?php echo base_url();?>upload/sc.jpg" alt="Sonam Choden">
                         </div>
                     </div>
                     <div class="details">
@@ -331,7 +331,7 @@
         <div class="event-grid">
             <a href="../detail_news/news.html" class="first-event Event">
                 
-                <img src="Event1.png" alt="">
+                <img src="<?php echo base_url();?>upload/Event1.png" alt="">
                 <div class="title">
                     <h3>2nd Round of Student Representative Council Meetings was Held</h3>
                     <div class="event-link">
@@ -341,7 +341,7 @@
             </a>
             
             <a href="../detail_news/news.html"  class="second-event Event">
-                <img src="Event2.png" alt="">
+                <img src="<?php echo base_url();?>upload/Event2.png" alt="">
                 <div class="title">
                     <h3>Yangchenphu HSS Versus Motithang HSS</h3>
                     <div class="event-link">
@@ -350,7 +350,7 @@
                 </div>
             </a>
             <a href="../detail_news/news.html" class="Third-event Event">
-                <img src="Event3.png" alt="">
+                <img src="<?php echo base_url();?>upload/Event3.png" alt="">
                 <div class="title">
                     <h3>2nd issue of Newletter Published</h3>
                     <div class="event-link">
@@ -359,7 +359,7 @@
                 </div>
             </a>
             <a href="../detail_news/news.html"  class="fourth-event Event">
-                <img src="Event4.png" alt="">
+                <img src="<?php echo base_url();?>upload/Event4.png" alt="">
                 <div class="title">
                     <h3>Final Junior class Basketball match</h3>
                     <div class="event-link">
