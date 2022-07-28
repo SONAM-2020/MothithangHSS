@@ -1,8 +1,8 @@
-<body id="mainpublicContent">
+<body>
     <div class="nav-bar">
         <div class="logo">
             <a href="../home/home.html">
-                <img src="<?php echo base_url();?>upload/logo.png" alt="Mhss_logo">
+                <img src="../NavPage/logo.png" alt="Mhss_logo">
             </a>
             <a href="../home/home.html">
                 <p>Motithang Higher Secondary School</p>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="menu-body">
-            <input type="radio" name = "nav-radio" id="announcement">
+            <input type="radio" name = "nav-radio" onclick = "checkRole()" id = "announcement">
             <input type="radio" name = "nav-radio" id = "non-academic">
             <input type="radio" name = "nav-radio" onclick = "checkRole()" id = "academic">
             <input type="radio" name = "nav-radio" onclick = "checkRole()" id = "about-us">
@@ -52,8 +52,8 @@
                 </div>
                 <div class="nav-link-container">
                     <div class="announcement-links">
-                        <a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/news/')">News and Events</a>
-                        <a href="#"  onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/announcement/')">Announcements</a>
+                        <a href="../newsEvents/NewsEvents.html">News and Events</a>
+                        <a href="../announcements/announcement.html">Announcements</a>
                     </div>
                     <div class="non-academic-links">
                         <label for="role" class = "role">Role</label>
@@ -69,7 +69,7 @@
                     <div class="about-us-links">
                         <a href="../about/about.html">About Motithang</a>
                         <a href="../Staff Profile/staffprofile.html">Staff Proflie</a>
-                        <a href="index.php?baseController/loadpage/history/')">History</a>
+                        <a href="../history/history.html">History</a>
                         <a href="../countryTopper/countrytopper.html">Country Toppers</a>
                     </div>
                 </div>
@@ -159,3 +159,182 @@
 
        </div>
     </div>
+    <div class="img-container">
+        <img src="../image/Mhss 1.png" alt="image" class="image1">
+        <p class="historyTopic">HISTORY</p>
+    </div>
+    <nav>
+        <ul class="nav">
+           <a href="../about/about.html"><b><li>About Us /</li></b></a> 
+            <a href="./history.html"><li>History of MHSS</li></a>
+           <a href="../countryTopper/countrytopper.html"><li>Country Topper</li></a>
+            <a href="../Staff Profile/staffprofile.html"><li>Staff Profiles</li></a>
+        </ul>
+    </nav>
+    <hr width="100%">
+    <div class="history">
+        Motithang Higher Secondary School, located in Motithang, which means an abode of pearls,
+        was established on April 1, 1975. When it started it was known as Motithang Central School.
+        The school had one building and a total student population of two hundred and thirty-five.
+        There were classes ranging from one to eight with fourteen teachers including the principal.
+        <br><br>
+        
+        The school was then upgraded to a junior high school level with the phasing out of classes one
+        and two, and upgrading of the school till class ten in 1989. One primary level was phased out
+        every year till the school became a full-fledged high school with classes ranging from seven to eight.
+        <br><br>
+        
+        The school was upgraded to a higher secondary in 2006 with Mrs. Maina Kharga as the principal. The
+        school also had its first All Bhutan Class Ten Topper in 2000 under the leadership of its then
+        principal Mrs. Maina Kharga, making it one of the top high schools in the country. From then
+        onwards, the school has produced many such toppers.
+    </div>
+
+    <div class="prev_principals">
+        <p> LIST OF PRINCIPALS TILL DATE</p>
+    </div>
+
+    <div class="year">
+        <i class="fa-solid fa-circle"></i> <br>
+        <b>2013</b>
+    </div>
+    <div class="prin_container">
+        <div class="first">
+        </div>
+        
+        <div class="last">
+            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <div class="name-container">
+                <p class="Pname">
+                    MR. SANGAY KHANDU
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="year">
+        <i class="fa-solid fa-circle"></i> <br>
+        <b>2012</b>
+    </div>
+    <div class="prin_container">
+        <div class="first">
+            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <div class="name-container">
+                <p class="Pname">
+                    MR. NORBU GYELTSHENS
+                </p>
+            </div>
+        </div>
+        
+        <div class="last"></div>
+    </div>
+
+    <div class="year">
+        <i class="fa-solid fa-circle"></i> <br>
+        <b>2007</b>
+    </div>
+    <div class="prin_container">
+        <div class="first">
+        </div>
+
+        <div class="last">
+            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <div class="name-container">
+                <p class="Pname">
+                    MRS. KARMA ZANGMO
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="year">
+        <i class="fa-solid fa-circle"></i> <br>
+        <b>1999</b>
+    </div>
+    <div class="prin_container">
+        <div class="first">
+            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <div class="name-container">
+                <p class="Pname">
+                    MRS. MAINA KHARGA
+                </p>
+            </div>
+        </div>
+
+        <div class="last"></div>
+    </div>
+    
+    <div class="year">
+        <i class="fa-solid fa-circle"></i> <br>
+        <b>1994</b>
+    </div>
+    <div class="prin_container">
+        <div class="first">
+        </div>
+        
+        <div class="last">
+            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <div class="name-container">
+                <p class="Pname">
+                    MRS. PEM SHERAB
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="year">
+        <i class="fa-solid fa-circle"></i> <br>
+        <b>1988</b>
+    </div>
+    <div class="prin_container">
+        <div class="first">
+            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <div class="name-container">
+                <p class="Pname">
+                    AUM GAGEY LHAM
+                </p>
+            </div>
+        </div>
+        
+        <div class="last"></div>
+    </div>
+    
+    <div class="year">
+        <i class="fa-solid fa-circle"></i> <br>
+        <b>1987</b>
+    </div>
+    <div class="prin_container">
+        <div class="first"></div>
+        
+        <div class="last">
+            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <div class="name-container">
+                <p class="Pname">
+                    MRS. NAMGAY OM
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="year">
+        <i class="fa-solid fa-circle"></i> <br>
+        <b>1975</b>
+    </div>
+    <div class="prin_container">
+        <div class="first noborder" >
+            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <div class="name-container">
+                <p class="Pname">
+                    MR. A DHAR
+                </p>
+            </div>
+        </div>
+        
+        <div class="last"></div>
+        
+        <div class="last-gap"></div>
+    </div>
+    
+<script src = "../NavPage/nav.js"></script>
+<script src="https://kit.fontawesome.com/868d304e73.js" crossorigin="anonymous"></script>
+</body>

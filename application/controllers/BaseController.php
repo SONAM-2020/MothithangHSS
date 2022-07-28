@@ -14,9 +14,9 @@ class BaseController extends CI_Controller {
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/announcement', $page_data);   
         }
-        if($param1=="news"){
+        if($param1=="history"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/pages/news', $page_data);   
+            $this->load->view('web/pages/history', $page_data);   
         }
     }
     function linkresetpassword(){
