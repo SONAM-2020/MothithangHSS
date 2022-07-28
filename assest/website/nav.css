@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav-bar {
+    font-family: "Bebas Neue";
+}
+
+.hide {
+    display: none;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #003366;
+    z-index: 2;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+}
+
+.nav-bar .logo p {
+    font-family: "Bebas Neue";
+    margin-left: .5rem;
+    font-size: clamp(17px, 2.5vw, 34px);
+    color: white;
+}
+
+
+.menu {
+    /* border: 1px solid firebrick; */
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.menu p {
+    padding: 5px;
+    font-size: clamp(20px, 2.5vw, 28px);
+    color: white;
+}
+
+.nav-bar a {
+    text-decoration: none;
+}
+
+
+.close p {
+    padding: 5px;
+    font-family: "Roboto";
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: white;
+}
+
+#side-menu:checked~.nav-menu {
+    z-index: 100;
+    top: 0;
+}
+
+.nav-bar input {
+    display: none;
+}
+
+/* Nav-menu */
+.nav-menu {
+    position: fixed;
+    width: 100vw;
+    background-color: #003366;
+    min-height: 100vh;
+    top: -100%;
+    transition: 0.5s all ease-out;
+}
+
+.nav-menu-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close {
+    height: 105px;
+    width: fit-content;
+    display: grid;
+    padding-right: 2vw;
+    grid-template-columns: 1fr;
+    /* border: 1px solid black; */
+}
+
+.menu-body {
+    padding: 2rem 5vw;
+}
+
+.full-size-nav {
+    display: flex;
+}
+
+.menu-body a,
+.menu-body label {
+    font-family: "Bebas Neue";
+    text-decoration: none;
+    text-align: left;
+    color: rgb(206, 206, 206);
+    font-size: clamp(22px, 2.2vw, 28px);
+    font-weight: 100;
+    padding: 15px 10px 0 0;
+    /* border: 1px solid black; */
+    width: fit-content;
+    transition: 0.3s all ease-out;
+    position: relative;
+}
+
+.menu-body a::before,
+.menu-body label::before {
+    transition: 0.3s all ease-out;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: white;
+    height: 2px
+}
+
+.menu-body a:hover::before {
+    width: 95%;
+}
+
+.menu-body a:hover,
+.menu-body label:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.label-container {
+    display: flex;
+    margin-right: 3vw;
+    flex-direction: column;
+}
+
+.nav-sublink-container,
+.nav-link-container {
+    position: relative;
+    width: 250px;
+    height: 300px;
+
+}
+
+.nav-sublink-container {
+    position: relative;
+    left: -8rem;
+}
+
+.nav-link-container *,
+.nav-sublink-container * {
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    transition: 0.3s all ease-out;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+/* For link animation */
+
+#announcement:checked~.nav-maincontainer .nav-link-container .announcement-links {
+    top: 10px;
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
+
+#announcement:checked~.nav-maincontainer .nav-link-container .announcement-links * {
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
+
+#non-academic:checked~.nav-maincontainer .nav-link-container .non-academic-links {
+    top: 10px;
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
+
+#non-academic:checked~.nav-maincontainer .nav-link-container .non-academic-links * {
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
+
+#academic:checked~.nav-maincontainer .nav-link-container .academic-links {
+    top: 10px;
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
+
+#academic:checked~.nav-maincontainer .nav-link-container .academic-links * {
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
+
+#about-us:checked~.nav-maincontainer .nav-link-container .about-us-links {
+    top: 10px;
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
+
+#about-us:checked~.nav-maincontainer .nav-link-container .about-us-links * {
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
+
+#role:checked~.nav-maincontainer .nav-sublink-container .sub-links {
+    top: 10px;
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
+
+#role:checked~.nav-maincontainer .nav-sublink-container .sub-links * {
+    overflow: visible;
+    opacity: 1;
+    height: auto;
+}
+
+
+
+/* For selection effect */
+#announcement:checked~.nav-maincontainer .label-container .announcement::before {
+    width: 95%
+}
+
+#announcement:checked~.nav-maincontainer .label-container .announcement {
+    color: white;
+}
+
+#non-academic:checked~.nav-maincontainer .label-container .non-academic::before {
+    width: 95%
+}
+
+#non-academic:checked~.nav-maincontainer .label-container .non-academic {
+    color: white;
+}
+
+#academic:checked~.nav-maincontainer .label-container .academic::before {
+    width: 95%
+}
+
+#academic:checked~.nav-maincontainer .label-container .academic {
+    color: white;
+}
+
+#about-us:checked~.nav-maincontainer .label-container .about-us::before {
+    width: 95%
+}
+
+#about-us:checked~.nav-maincontainer .label-container .about-us {
+    color: white;
+}
+
+#role:checked~.nav-maincontainer .nav-link-container .non-academic-links .role::before {
+    width: 95%
+}
+
+#role:checked~.nav-maincontainer .nav-link-container .non-academic-links .role {
+    color: white;
+}
+
+
+
+
+@media only screen and (max-width: 810px) {
+    .logo {
+        padding: .25rem .5rem;
+    }
+
+    .menu-body {
+        padding: .5rem 1rem;
+    }
+
+    .logo img {
+
+        height: 60px;
+        width: 75px;
+    }
+
+    .menu p {
+        display: none;
+    }
+
+    .menu img {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .full-size-nav {
+        display: none;
+
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .menu-body {
+        margin-left: 2rem;
+    }
+
+    .nav-link-container *,
+    .nav-sublink-container * {
+        position: static;
+        font-size: 18px;
+        /* border: 1px solid black; */
+        top: 0;
+        left: 2rem;
+    }
+
+    .sub-links {
+        height: 0;
+        overflow: hidden;
+        margin-left: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nav-link-container a,
+    .nav-link-container label,
+    .nav-sublink-container a,
+    .nav-sublink-container label {
+        font-size: 18px;
+    }
+
+    .nav-sublink-container,
+    .nav-link-container {
+        height: auto;
+        padding: 0;
+        padding-right: 2rem;
+    }
+
+    .nav-sublink-container {
+        display: none;
+    }
+
+    #role:checked~.nav-maincontainer .nav-link-container .non-academic-links .nav-sublink-container {
+        display: block;
+
+
+    }
+}

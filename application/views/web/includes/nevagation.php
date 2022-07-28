@@ -1,101 +1,161 @@
-<div class="body-wrapper" >
-    <header class="li-header-4" style="background-color: #7d0b0b;">
-        <div class="header-top pt-0 pb-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4">
-                        <div class="header-top-left">
-                            <ul class="phone-wrap">
-                                <li class="phone-wrap"><span>Telephone Enquiry: </span><a href="#">(+975) <?=$CompanyInfo->Contact_Number;?></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-9 col-md-8">
-                        <div class="header-top-right">
-                            <ul class="ht-menu">
-                                <li class="phone-wrap">
-                                   <span>Email Enquiry: </span><a href="#" style="color: white;">  <?=$CompanyInfo->Email_Address;?></a>
-                                </li>
-                                <!-- <li>
-                                    <span class="language-selector-wrapper">Language :</span>
-                                    <div class="ht-language-trigger"><span>English</span></div>
-                                    <div class="language ht-language">
-                                        <ul class="ht-setting-list">
-                                            <li class="active"><a href="#"><img src="<?php echo base_url();?>assest/website/images/menu/flag-icon/1.jpg" alt="">English</a></li>
-                                            <li><a href="#"><img src="<?php echo base_url();?>assest/website/images/menu/flag-icon/2.jpg" alt="">Dzongkha</a></li>
-                                        </ul>
-                                    </div>
-                                </li> -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+<body id="mainpublicContent">
+    <div class="nav-bar">
+        <div class="logo">
+            <a href="../home/home.html">
+                <img src="<?php echo base_url();?>upload/logo.png" alt="Mhss_logo">
+            </a>
+            <a href="../home/home.html">
+                <p>Motithang Higher Secondary School</p>
+            </a>
+        </div>
+        <input type="checkbox" id="side-menu" class="hide">
+        <div class="menu">
+            <label for="side-menu" class="menu">
+                <img src="../NavPage/hambar.png" alt="">
+                <p>Menu</p>
+            </label>
+        </div>
+       <div class="nav-menu">
+        <div class="nav-menu-header">
+            <div class="logo">
+                <a href="../home/home.html">
+                    <img src="../NavPage/logo.png" alt="Mhss_logo">
+                </a>
+                <a href="../home/home.html">
+                    <p>Motithang Higher Secondary School</p>
+                </a>
+            </div>
+            <input type="checkbox" id="side-menu" class="hide">
+            <div class=" close">
+                <label for="side-menu" class = "menu">
+                    <p >Close</p>
+                    <img src="../NavPage/close.png" alt="">
+                </label>
+                
             </div>
         </div>
-        <div class="header-middle pl-sm-0 pr-sm-0 pl-xs-0 pr-xs-0 pt-15 pb-15">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="logo pb-sm-30 pb-xs-30">
-                            <a href="<?php echo base_url();?>">
-                                <img src="<?php echo base_url();?>uploads/dcsilogowhite.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 pl-0 ml-sm-15 ml-xs-15">
-                        <!-- Begin Header Middle Searchbox Area -->
-                        <form action="#" class="hm-searchbox" id="searchdetails">
-                            <input type="text" id="searchdetailsfom" name="searchdetails" placeholder="Enter Name of Product">
-                            <button class="li-btn" type="button" onclick="searchproductdetails()"><i class="fa fa-search"></i></button>
-                        </form>
-                        <span class="text-danger" id="searcherr"></div>
-                        <div class="header-middle-right">
-                            <ul class="hm-menu">
-                                <li class="hm-wishlist">
-                                   <div class="default-btn">
-                                          <a class="links bg-info text-white" href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/Login/')">Login</a>
-                                   </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header-bottom header-sticky d-none d-lg-block d-xl-block" style="background-color: #7d0b0b;">
-            <!-- style="background-image: url('<?php echo base_url();?>uploads/header1.JPG')"  -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="hb-menu">
-                            <nav style="color:white;">
-                                <ul>
-                                  <li></li>
-                                  <li></li>
-                                  <li></li>
-                                  <li></li>
-                                  <li><a href="<?php echo base_url();?>">Home</a></li>
-                                  <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/About/')">About Us</a></li>
-                                  <!-- <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/Partner/')">Partner Profile</a></li> -->
-                                  <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/News/')">Technology News</a></li>
-                                  <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/Downloads/')">Downloads</a></li>
-                                  <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/Contact/')">Contact Us</a></li>
-                                  <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/TechnologyRequest/')">Technology Request</a></li>
-                                  <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/localregister/')">Registration</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mobile-menu-area d-lg-none d-xl-none col-12">
-            <div class="container"> 
-                <div class="row">
-                    <div class="mobile-menu">
-                    </div>
-                </div>
-            </div>
-        </div>
-</header>
+        <div class="menu-body">
+            <input type="radio" name = "nav-radio" id="announcement">
+            <input type="radio" name = "nav-radio" id = "non-academic">
+            <input type="radio" name = "nav-radio" onclick = "checkRole()" id = "academic">
+            <input type="radio" name = "nav-radio" onclick = "checkRole()" id = "about-us">
+            <input type="checkbox" id = "role">
+            <div class="nav-maincontainer">
 
+                <div class="full-size-nav">
+                    <div class="label-container">
+                    <label for="announcement" class = "announcement">Announcements</label>
+                    <label for="non-academic" class = "non-academic">Non-Academic</label>
+                    <label for="academic" class = "academic">Academic</label>
+                    <label for="about-us" class = "about-us">About Us</label>
+                    <a href="../contactUs/contact.html">Contact Us</a>
+                </div>
+                <div class="nav-link-container">
+                    <div class="announcement-links">
+                        <a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/news/')">News and Events</a>
+                        <a href="#"  onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/announcement/')">Announcements</a>
+                    </div>
+                    <div class="non-academic-links">
+                        <label for="role" class = "role">Role</label>
+                        <a href="">Policy</a>
+                        <a href="../Alumni/alumni.html">Alumini</a>
+                    </div>
+                    <div class="academic-links">
+                        <a href="../result/result.html">Results</a>
+                        <a href="">Download</a>
+                        <a href="">Academic Toppers</a>
+                        <a href="../">Academic Calender</a>
+                    </div>
+                    <div class="about-us-links">
+                        <a href="../about/about.html">About Motithang</a>
+                        <a href="../Staff Profile/staffprofile.html">Staff Proflie</a>
+                        <a href="../history/history.html">History</a>
+                        <a href="../countryTopper/countrytopper.html">Country Toppers</a>
+                    </div>
+                </div>
+                <div class="nav-sublink-container">
+                    <div class="sub-links">
+                        
+                        <a href="">Management</a>
+                        <a href="">Committe</a>
+                        <a href="">Coordinator</a>
+                        <a href="">Assistant</a>
+                        <a href="">Captains</a>
+                        <a href="">Others</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-nav">
+                <div class="announcements-container">
+                    <div class="label-container">
+                        <label for="announcement" class = "announcement">Announcement</label>
+                    </div>
+                    <div class="nav-link-container">
+                        <div class="announcement-links">
+                            <a href="../newsEvents/NewsEvents.html">News and Events</a>
+                            <a href="../announcements/announcement.html">Announcements</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="non-academic-container">
+                    <div class="label-container">
+                        <label for="non-academic" class = "non-academic">Non-Academic</label>
+                    </div>
+                    <div class="nav-link-container">
+                        <div class="non-academic-links">
+                            <label for="role" class = "role">Role</label>
+                            
+                            <div class="nav-sublink-container">
+                                <div class="sub-links">
+                                    <a href="">Management</a>
+                                    <a href="">Committe</a>
+                                    <a href="">Coordinator</a>
+                                    <a href="">Assistant</a>
+                                    <a href="">Captains</a>
+                                    <a href="">Others</a>
+                                </div>
+                            </div>
+                            <a href="">Policy</a>
+                            <a href="../Alumni/alumni.html">Alumini</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="academic-container">
+                    <div class="label-container">
+                        <label for="academic" class = "academic">Academic</label>
+                    </div>
+                    <div class="nav-link-container">
+                        <div class="academic-links">
+                            <a href="../result/result.html">Results</a>
+                            <a href="">Download</a>
+                            <a href="">Academic Toppers</a>
+                            <a href="">Academic Calender</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="about-us-container">
+                    <div class="label-container">
+                        <label for="about-us" class = "about-us">About Us</label>
+                    </div>
+                    <div class="nav-link-container">
+                        <div class="about-us-links">
+                            <a href="../about/about.html">About Motithang</a>
+                            <a href="../Staff Profile/staffprofile.html">Staff Proflie</a>
+                            <a href="../history/history.html">History</a>
+                            <a href="../countryTopper/countrytopper.html">Country Toppers</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-us">
+                    <div class="label-container">
+                        <a href="../contactUs/contact.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        </div>
+
+       </div>
+    </div>

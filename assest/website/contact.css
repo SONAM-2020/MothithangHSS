@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap');
+
+*{
+    margin: 0rem;
+    font-family: Roboto;
+    box-sizing: border-box;
+  
+}
+
+.img-container{
+    margin-top: 5rem;
+    width: 100%;
+    height: 445px;
+
+    position: relative;
+}
+
+.img-container img{
+    height: 445px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.f_contactus{
+    pointer-events: none;
+    width: fit-content;
+    position: absolute;
+    font-size: 45px;
+    top: 200px;
+    right: 40%;
+    left: 40%;
+    font-weight: bolder;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+   
+}
+
+
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+    align-items: center;
+    margin: 8rem 0rem;
+    text-align: center;
+    
+}
+
+.location ,.call ,.message{
+    width: 400px;
+    height: 355px;
+    border: 1px solid #003366;
+    background-color: #F9F3F3;
+    border-radius: 5px;
+    filter: drop-shadow(0px  3px 4px #003366);
+    padding: 5rem 0rem;
+    cursor: pointer;
+}
+
+.icon{
+   color: #003366;
+}
+
+.header{
+    margin-top: 2rem;
+    font-size: 25px;
+    font-family: Bebas Neue;
+}
+
+.content a{
+    text-decoration: none;
+    color: black;
+}
+
+.content{
+    margin-top: 1rem;
+    font-size: 20px;
+    font-family: Roboto;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .img-container{
+        height: 200px;
+    }
+
+    .img-container img{
+        height: 200px;
+    }
+
+    .header{
+        margin-top: 1rem;
+        font-size: 20px;
+
+    }
+    .contact{
+
+        flex-direction: column;
+        row-gap: 1rem;
+        justify-content: space-evenly;
+        
+    }
+    .location ,.call ,.message{
+        width: 315px ;
+        height: 295px; 
+    }
+    .f_contactus{
+        
+        pointer-events: none;
+      
+        font-size: 25px;
+        top: 87px;
+        right: 30%;
+        left: 27%;   
+    }
+}

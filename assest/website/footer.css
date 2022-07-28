@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap');
+
+
+footer * {
+    box-sizing: border-box;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 32ba8f94096fbe367c068d8fb16bbd6d29133d4a
+>>>>>>> b6d4cbf4dec9c59e4537ffb19adfd719a6d29d50
+>>>>>>> 516a453b5ee7f8f6b1237b6fe3da388ecda358bd
+>>>>>>> cc07484b520cff426dbf2b6d88d4845f20d8a57c
+    font-family: Roboto;
+    font-weight: 700;
+}
+
+footer:hover {
+    cursor: auto;
+}
+
+footer a {
+    transition: 0.3s all ease-out;
+    font-weight: 200;
+}
+
+footer a:hover {
+    color: #c4c4c4;
+
+
+}
+
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 3rem;
+    background-color: #003366;
+    color: aliceblue;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Roboto;
+    width: 100%;
+    cursor: pointer;
+}
+
+.f_logo {
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.f_logo img {
+    width: 134px;
+    height: 122px;
+    margin-bottom: 2rem;
+}
+
+.f_logo p {
+    font-family: Roboto;
+    font-size: 15px;
+    padding-bottom: 7px;
+
+}
+
+.f_logo .phone {
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.f_logo p a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.f_logo p a:hover {
+    color: #c4c4c4;
+}
+
+
+.quickLinks p {
+    font-size: 15px;
+    padding-top: 0.7rem;
+    text-transform: uppercase;
+    padding-left: 1rem;
+}
+
+.quickLinks .N_header {
+    margin-top: 1rem;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+
+}
+
+.f_link {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+
+.N_header {
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+.footer .quickLinks p a:hover {
+    margin-left: 5px;
+    color: #c4c4c4;
+
+
+}
+
+.icons {
+    margin: 1rem 0;
+}
+
+.footer .quickLinks p span a {
+    text-decoration: none;
+    color: white;
+}
+
+.fa-instagram,
+.fa-facebook-official {
+    padding-left: 1rem;
+}
+
+.line {
+    background-color: #003366;
+}
+
+.line hr {
+    background-color: aliceblue;
+    margin: 0 auto;
+    width: 80%;
+    height: 5px;
+}
+
+.copyright {
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem 0rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 810px) {
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 2rem;
+        column-gap: 0px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .N_header {
+        font-size: 20px;
+
+    }
+
+    .logo p {
+        font-size: 15px;
+        padding-bottom: 7px;
+    }
+
+    .copyright {
+        font-size: 12px;
+
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        column-gap: 0px;
+        text-align: center;
+    }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> b6d4cbf4dec9c59e4537ffb19adfd719a6d29d50

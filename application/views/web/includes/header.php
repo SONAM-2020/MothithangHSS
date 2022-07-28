@@ -3,26 +3,23 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>CSI Technology Request Database</title>
+    <title>Motithang Higher Secondary School</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>uploads/dcsilogo.png">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/fontawesome-stars.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/meanmenu.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/slick/slick.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/slick/slick-theme.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/animate.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/venobox.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/nice-select.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/magnific-popup.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/helper.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/style12.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/css/responsive.css">
-    <script src="<?php echo base_url();?>assest/website/js/vendor/modernizr-2.8.3.min.js"></script>
-    <link rel="stylesheet" type="text/css" id="theme" href="<?php echo base_url();?>assest/summernote/summernote-lite.css"/>
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/about.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/alumni.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/announcement.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/belowNav.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/card.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/contact.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/countrytopper.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/footer.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/history.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/home.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/nav.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/news.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/newsEvents.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assest/website/result.css">
+   
 </head>

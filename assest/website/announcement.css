@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+}
+
+.img-container {
+
+    margin: 0;
+    height: 445px;
+    width: 100%;
+    background-color: black;
+}
+
+.announcement_img {
+    height: 445px;
+    width: 100%;
+    opacity: .7;
+    object-fit: cover;
+}
+
+.announcements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    position: relative;
+    font-size: clamp(22px, 4vw, 40px);
+    bottom: 250px;
+    font-weight: bolder;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    word-spacing: 1rem;
+}
+
+.announcementInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem 0 4rem 0;
+}
+
+.left {
+    border-right: 1px solid rgba(0, 0, 0, 0.29);
+}
+
+.right {
+    border-left: 1px solid rgba(0, 0, 0, 0.29);
+}
+
+.announcementPic {
+    width: clamp(270px, 100%, 450px);
+
+    height: clamp(180px, 100%, 260px);
+}
+
+.picture {
+    text-align: center;
+    align-items: center;
+}
+
+.word {
+    margin: 3rem 3rem 0 3rem;
+    position: relative;
+}
+
+.word h1 {
+    font-family: "Bebas Neue";
+    font-size: 25px;
+    font-weight: light;
+    color: #01416F;
+}
+
+.word p,
+.word a {
+    font-family: "Roboto";
+}
+
+.word a {
+    position: absolute;
+    bottom: 0;
+    right: 3%;
+    text-decoration: none;
+    color: #01416F;
+    text-transform: capitalize;
+    display: flex;
+
+}
+
+.word a i {
+    font-size: 23px;
+}
+
+.word a p {
+    font-size: 17px;
+    padding-left: 0.5rem;
+}
+
+.word a:hover {
+    color: #139469;
+    transition: 0.3s all ease-out;
+}
+
+.loadmore {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.loadmore button {
+    font-size: 20px;
+    background: #01416F;
+    text-transform: capitalize;
+    padding: 0.5rem 2rem;
+    color: white;
+    font-family: "Bebas Neue";
+    border: none;
+    margin: 3rem 0;
+}
+
+.loadmore button:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    background: #04263f;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 980px) {
+
+    .img-container {
+        height: 185px;
+        width: 100%;
+    }
+
+    .announcement_img {
+        height: 185px;
+    }
+
+    .announcements {
+        bottom: 92.5px;
+    }
+
+    .announcementInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        order: 1;
+        border: none;
+    }
+
+    .right {
+        order: 2;
+    }
+
+    .picture {
+        margin-top: 2rem;
+      }
+
+}

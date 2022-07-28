@@ -7,80 +7,18 @@ class BaseController extends CI_Controller {
         parent::_construct();
     }
     public function index(){
-        $this->load->view('web/index',$page_data);
+        $this->load->view('web/index');
     }
     function loadpage($param1="",$param2=""){
-        $page_data['designationList'] = $this->db->get_where('t_designation_master',array('Status'=>'Active'))->result_array();
-        $page_data['CompanyInfo'] = $this->db->get_where('t_company_details')->row(); 
-        if($param1=="localregister"){
+        if($param1=="announcement"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/pages/localregister', $page_data);   
+            $this->load->view('web/pages/announcement', $page_data);   
         }
-        if($param1=="resetpassword"){
+        if($param1=="news"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/pages/resetpassword', $page_data);   
+            $this->load->view('web/pages/news', $page_data);   
         }
-        if($param1=="resetnewpassword"){
-            $page_data['linktype']=$param1;
-            $this->load->view('web/pages/password', $page_data);   
-        }
-        if($param1=="globalregister"){
-            $page_data['t_country_master'] = $this->db->get_where('t_country_master',array('Status'=>'Active'))->result_array();
-            $page_data['linktype']=$param1;
-            $this->load->view('web/pages/globalregister', $page_data);   
-        }
-        if($param1=="About"){
-            $page_data['linktype']=$param1;
-            $this->load->view('web/pages/aboutus', $page_data);   
-        }
-        if($param1=="Partner"){
-            $page_data['PartnerInfo'] = $this->db->get_where('t_partner_details')->row();
-            $page_data['linktype']=$param1;
-            $this->load->view('web/pages/Partner', $page_data);   
-        }
-        if($param1=="News"){
-            $page_data['news_list'] = $this->db->get_where('t_news_announcement',array('Status'=>'Active'))->result_array();
-            $page_data['t_announcement'] = $this->db->get_where('t_news_announcement',array('Status'=>'Active'))->result_array();
-            $page_data['linktype']=$param1;
-            $this->load->view('web/pages/News', $page_data);   
-        }
-        if($param1=="Downloads"){
-            $page_data['t_downloads'] = $this->db->get_where('t_downloads',array('Status'=>'Active'))->result_array();
-            $page_data['CompanyInfo'] = $this->db->get_where('t_company_details')->row(); 
-            // $page_data['product_list'] = $this->CommonModel->gethomeproductDetails();
-            $page_data['category_list'] = $this->CommonModel->get_active_category_list();
-            $page_data['linktype']=$param1;
-            $this->load->view('web/pages/download', $page_data);   
-        }
-        if($param1=="TechnologyRequest"){
-            $page_data['technologyrequestformList'] = $this->db->get_where('t_technology_request', array(
-        'Status' => 'Active'))->result_array();
-            $page_data['linktype']=$param1;
-            $this->load->view('web/pages/technologyrequestform', $page_data);   
-        }
-        if($param1=="Login"){
-            $page_data['linktype']=$param1;
-            $this->load->view('web/login/login', $page_data);   
-        }
-        if($param1=="Newsdetails"){
-            $page_data['t_announcement'] = $this->db->get_where('t_news_announcement',array('Id'=>$param2))->result_array();
-            $page_data['news_list'] = $this->db->get_where('t_news_announcement',array('Status'=>'Active'))->result_array();
-            $page_data['linktype']=$param1;
-            $this->load->view('web/pages/newsdetails', $page_data);   
-        }
-        if($param1=="Contact"){
-            $page_data['CompanyInfo'] = $this->db->get_where('t_company_details')->row(); 
-            $page_data['linktype']=$param1;
-            $this->load->view('web/pages/Contactus', $page_data);   
-        }
-        if($param1=="ViewRequestDetails"){
-        $page_data['technologyrequestformList'] = $this->db->get_where('t_technology_request', array(
-            'Id' => $param2))->row();
-        $this->load->view('web/pages/technologyrequestformdetails', $page_data);
     }
-    }
-   
-
     function linkresetpassword(){
         $page_data['message']="";
         $page_data['messagefail']="";
