@@ -7,7 +7,7 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => '127.0.0.1',
 	'username' => 'root',
-	// iloveMSQL123
+	// iloveMSQL123 - ikigai
 	'password' => 'iloveMSQL123',
 	'database' => 'mhss',
 	'dbdriver' => 'mysqli',
