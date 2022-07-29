@@ -390,3 +390,6 @@
         </div>
     </div>
 </div>
+
+
+<SCript src="<?php echo base_url();?>assest/website/home.js"></SCript>
