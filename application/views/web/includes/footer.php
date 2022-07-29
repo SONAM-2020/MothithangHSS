@@ -163,6 +163,11 @@
 <script src="<?php echo base_url();?>assest/jquery.form.js"></script>
 <script src="<?php echo base_url();?>assest/jquery-blockUI.js"></script>
 
+<script src="<?php echo base_url();?>assest/website/home.js"></script>
+<script src="<?php echo base_url();?>assest/website/nav.js"></script>
+<script src="<?php echo base_url();?>assest/website/result.js"></script>
+<script src="<?php echo base_url();?>assest/website/staff.js"></script>
+
 <script type="text/javascript">
     function remove_err(err_Id,fieldId){
         if($('#'+fieldId).val()!=""){

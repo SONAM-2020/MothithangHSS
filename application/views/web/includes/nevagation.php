@@ -49,6 +49,7 @@
                     <label for="academic" class = "academic">Academic</label>
                     <label for="about-us" class = "about-us">About Us</label>
                     <a href="../contactUs/contact.html">Contact Us</a>
+                    <a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/login/')">Administrator Login</a>
                 </div>
                 <div class="nav-link-container">
                     <div class="announcement-links">
@@ -150,6 +151,11 @@
                 <div class="contact-us">
                     <div class="label-container">
                         <a href="index.php?baseController/loadpage/contactus/')">Contact Us</a>
+                    </div>
+                </div>
+                <div class="contact-us">
+                    <div class="label-container">
+                        <a href="index.php?loginController/loadpage/login/')">Administrator Login</a>
                     </div>
                 </div>
             </div>

@@ -7,27 +7,13 @@ class loginController extends CI_Controller {
         parent::_construct();
     }
     public function index(){
-        $page_data['CompanyInfo'] = $this->db->get_where('t_company_details')->row(); 
-        $page_data['t_announcement'] = $this->db->get_where('t_news_announcement',array('Status'=>'Active'))->result_array();
-         $page_data['t_imagecategory'] = $this->db->get_where('t_category_master',array('Status'=>'Active'))->result_array();
-        $page_data['t_imageslider'] = $this->db->get_where('t_image_slider',array('Status'=>'Active'))->result_array();
-
-        $page_data['category_list'] = $this->CommonModel->get_active_category_list();
         $this->load->view('web/index', $page_data);
     }
     //edited this method
     function login(){
-        $page_data['grequest_info'] = $this->db->get_where('t_technology_request',array('Status'=>'Active'))->result_array();
-        $page_data['lrequest_info'] = $this->db->get_where('t_technology_request',array('Status'=>'Active'))->result_array();
-        $page_data['CompanyInfo'] = $this->db->get_where('t_company_details')->row(); 
-        $page_data['Message'] = $this->db->get_where('t_contactus',array('Status'=>'Active'))->result_array();
-        $page_data['urejected_info'] = $this->db->get_where('t_user_master',array('Status'=>'InActive'))->result_array();
-        $query ="SELECT COUNT(Id) AS IdCount FROM `t_user_master` t WHERE t.`Status`='InActive'";
-        $page_data['IdCount'] = $this->db->query($query)->row();
-
          $page_data['message']="";
         if($this->input->post('email')!="" &&  $this->input->post('password')!=""){
-            $query = $this->db->get_where('t_user_master', array('Email' => $this->input->post('email')));
+            $query = $this->db->get_where('t_user', array('Email' => $this->input->post('email')));
             if ($query->num_rows() > 0){
                 $row = $query->row_array(); 
                 if(password_verify($this->input->post('password'), $row['Password'])){
@@ -61,20 +47,6 @@ class loginController extends CI_Controller {
         }
     }
     function dashboard($param=""){
-        $page_data['lrequest_info'] = $this->db->get_where('t_technology_request',array('Status'=>'Active'))->result_array();
-        $page_data['grequest_info'] = $this->db->get_where('t_technology_request',array('Status'=>'Active'))->result_array();
-        $page_data['Message'] = $this->db->get_where('t_contactus',array('Status'=>'Active'))->result_array();
-        $page_data['urejected_info'] = $this->db->get_where('t_user_master',array('Status'=>'InActive'))->result_array();
-        /*$query ="SELECT * FROM `t_user_master` t WHERE t.`Status`='InActive'";
-        $page_data['urejected_info'] = $this->db->query($query)->result_array();*/ 
-
-        $query ="SELECT COUNT(Id) AS IdCount FROM `t_user_master` t WHERE t.`Status`='InActive'";
-        $page_data['IdCount'] = $this->db->query($query)->row();
-
-        /*$query=$this->db->query("SELECT COUNT(t.`Company_Id`) AS COUNT, t.`Company_Id` FROM `t_products_master` t WHERE Company_Id = User_Id  GROUP BY t.`Company_Id`;")->result();
-        $page_data['query'] = $query;*/
-
-        
         $page_data['message']="";
         if ($this->session->userdata('User_Id') == null ){
             redirect(base_url(), 'refresh');
