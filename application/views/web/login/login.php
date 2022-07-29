@@ -1,59 +1,49 @@
 <?php header('Access-Control-Allow-Origin: *'); ?>
 <?php
-    $this->load->view('web/includes/header.php');
+  error_reporting(0);
 ?>
-
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Motithang Higher Secondary School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>assest/website/style.css">
+</head>
 <body>
-  <div id="mainpublicContent">
-    <div class="breadcrumb-area">
-        <div class="container">
-            <div class="breadcrumb-content">
-                <ul>
-                    <li><a href="<?php echo base_url();?>">Home</a></li>
-                    <li class="active">Login</li>
-                </ul> 
-            </div>
-        </div>
-    </div>
-    <div class="page-section mb-60">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-4 col-lg-4 col-xs-4">
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4 col-xs-4">
-                     <?php echo form_open('?loginController/login' , array('class' =>'form-horizontal','id' => 'loginform'));?>
-                        <div class="login-form">
-                            <h4 class="login-title">Login</h4>
-                            <div class="row">
-                                <div class="col-md-12 col-12 mb-20">
-                                    <label>Email Address*</label>
-                                    <input type="email" name="email" onclick="remove_err('email_err')" id="email" class="form-control mb-0" placeholder="Email Address">
-                                    <span id="email_err" class="text-danger"></span>
-                                </div>
-                                <div class="col-12 mb-20">
-                                    <label>Password</label>
-                                    <input type="password" id="password" onclick="remove_err('password_err')" name="password" class="form-control mb-0" placeholder="Password">
-                                    <span id="password_err" class="text-danger"></span>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="check-box d-inline-block ml-0 ml-md-2 mt-10">
-                                        <input type="checkbox" id="remember_me">
-                                        <label for="remember_me">Remember me</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mt-10 mb-20 text-left text-md-right">
-                                    <a href="#"  onclick="reset()"> Forgotten Password?</a>
-                                </div>
-                                <div class="col-md-12">
-                                    <button class="register-button mt-0" onclick="login()">Login</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<br><br>
+<div id="login-form-wrap">
+<br><br>
+  <h3> Administrator Login</h3>
+  <br><br>
+    <?php echo form_open('?baseController/login' , array('class' =>'form-horizontal','id' => 'login-form'));?>
+    <?php if($message!=''){?>
+      <div class="form-group has-feedback" id="mismatcherr" >
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <span class="text-danger"> <?php echo $message;?></span>
+          </div>
+      </div>
+    <?php }?>
+    <span id="messagetodisplay"></span>
+    <p>
+      <label>Email Address</label>
+     <input type="email" name="email" onclick="remove_err('email_err')" id="email">
+     <span id="email_err" class="text-danger"></span>
+    </p>
+    <br>
+    <p>
+      <label>Password</label>
+    <input type="password" id="password" onclick="remove_err('password_err')" name="password" >
+    <span id="password_err" class="text-danger"></span>
+    </p>
+    <br>
+    <p>
+    <button style="background-color: green;" class="register-button mt-0" onclick="login()">Login</button>
+    </p>
+  </form>
+  <br><br><br>
+  <div id="create-account-wrap">
+  </div>
 </div>
 <script>
 function login(){
@@ -90,11 +80,17 @@ function validate(){
 function remove_err(err_Id){
   $('#'+err_Id).html('');
 }
-function reset(){
-      $.blockUI
-      ({ 
-        css: 
-        { 
+
+function removevalidationhceckbox(errid,id){
+    if($('#'+id).prop('checked')){
+         $('#'+errid).html('');
+    }
+}
+   function loadpage(url){
+    $.blockUI
+        ({ 
+          css: 
+          { 
               border: 'none', 
               padding: '15px', 
               backgroundColor: '#000', 
@@ -102,13 +98,11 @@ function reset(){
               '-moz-border-radius': '10px', 
               opacity: .5, 
               color: '#fff' 
-        } 
-      });
-      var url='<?php echo base_url();?>index.php?baseController/loadpage/resetpassword';
-    $("#mainpublicContent").load(url);
+          } 
+        });
+      $("#mainpublicContent").load(url);
       setTimeout($.unblockUI, 1000); 
-  }
+    }
 </script>
-
 </body>
 </html>
