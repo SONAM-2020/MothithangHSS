@@ -9,7 +9,7 @@ $db['default'] = array(
 	'username' => 'root',
 	// iloveMSQL123 - ikigai,
 	'password' => '12210093',
-	'password' => 'iloveMSQL123',
+	// 'password' => 'iloveMSQL123',
 	'database' => 'mhss',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
