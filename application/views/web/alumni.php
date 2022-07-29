@@ -1,5 +1,5 @@
 <div class="img-container">
-        <img src="/Alumni/alumni.png" alt="image" class="alumni_img">
+        <img src="<?php echo base_url();?>uploads/alumni.png" alt="image" class="alumni_img">
         <p class="alumni">SCHOOL ALUMNI</p>
     </div>
 
