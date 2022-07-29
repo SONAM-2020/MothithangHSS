@@ -1,11 +1,11 @@
 <div class="img-container">
-        <img src="<?php echo base_url();?>uploads/announcement.png" alt="image" class="announcement_img">
+        <img src="<?php echo base_url();?>upload/announcement.png" alt="image" class="announcement_img">
         <p class="announcements">ANNOUNCEMENTS</p>
     </div>
     
     <div class="announcementInfo">
         <div class="left picture">
-            <img src="<?php echo base_url();?>uploads/welcome.png" alt="pic1" class="announcementPic">
+            <img src="<?php echo base_url();?>upload/welcome.png" alt="pic1" class="announcementPic">
         </div>
         <div class="word">
             <h1>Reporting of students for the academic year 2022</h1> <br>
@@ -42,13 +42,13 @@
             </a>
         </div>
         <div class="right picture">
-            <img src="<?php echo base_url();?>uploads/tender.png" alt="pic2" class="announcementPic">
+            <img src="<?php echo base_url();?>upload/tender.png" alt="pic2" class="announcementPic">
         </div>
     </div>
     
     <div class="announcementInfo">
         <div class="left picture">
-            <img src="<?php echo base_url();?>uploads/football.png" alt="pic3" class="announcementPic">
+            <img src="<?php echo base_url();?>upload/football.png" alt="pic3" class="announcementPic">
         </div>
         <div class="word">
             <h1>2nd issue of newsletter published</h1> <br>
