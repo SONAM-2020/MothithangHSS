@@ -1,11 +1,11 @@
 <div class="img-container">
-        <img src="./newsEvents.png" alt="image" class="newsEvents_img">
+        <img src="<?php echo base_url();?>upload/newsEvents.png" alt="image" class="newsEvents_img">
         <p class="news">NEWS AND EVENTS</p>
     </div>
     
     <div class="newsInfo">
         <div class="left picture">
-            <img src="./newsPic1.png" alt="pic1" class="newsPic">
+            <img src="<?php echo base_url();?>upload/newsPic1.png" alt="pic1" class="newsPic">
         </div>
         <div class="word">
             <h1>2nd round of student representative council meetings was held</h1> <br>
@@ -29,13 +29,13 @@
             <a href=""><i class="fa-solid fa-circle-arrow-right"></i><p> Read more</p> </a>
         </div>
         <div class="right picture">
-            <img src="./newsPic2.png" alt="pic2" class="newsPic">
+            <img src="<?php echo base_url();?>upload/newsPic2.png" alt="pic2" class="newsPic">
         </div>
     </div>
     
     <div class="newsInfo">
         <div class="left picture">
-            <img src="./newsPic3.png" alt="pic1" class="newsPic">
+            <img src="<?php echo base_url();?>upload/newsPic3.png" alt="pic1" class="newsPic">
         </div>
         <div class="word">
             <h1>2nd issue of newsletter published</h1> <br>

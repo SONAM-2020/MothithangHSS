@@ -1,5 +1,5 @@
 <div class="img-container">
-        <img src="./staffhead.png" alt="image" class="staff_img">
+        <img src="<?php echo base_url();?>upload/staffhead.png" alt="image" class="staff_img">
         <p class="staff_profile">STAFF PROFILE</p>
     </div>
     
@@ -30,7 +30,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="smb_image">
-                        <img src="./images/chairperson.jpg" id="smbpic">
+                        <img src="<?php echo base_url();?>upload/chairperson.jpg" id="smbpic">
                     </div>
 
                     <div class="name">
@@ -48,7 +48,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="smb_image">
-                        <img src="./images/sonam.jpg" id="smbpic">
+                        <img src="<?php echo base_url();?>upload/sonam.jpg" id="smbpic">
                     </div>
 
                     <div class="name">
@@ -66,7 +66,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="smb_image">
-                        <img src="./images/jigme choden.jpg" id="smbpic">
+                        <img src="<?php echo base_url();?>upload/jigme choden.jpg" id="smbpic">
                     </div>
 
                     <div class="name">
@@ -84,7 +84,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="smb_image">
-                        <img src="./images/tshering zam.jpg" id="smbpic">
+                        <img src="<?php echo base_url();?>upload/tshering zam.jpg" id="smbpic">
                     </div>
 
                     <div class="name">
@@ -102,7 +102,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="smb_image">
-                        <img src="./images/Tshering zangmo.jpg" id="smbpic">
+                        <img src="<?php echo base_url();?>upload/Tshering zangmo.jpg" id="smbpic">
                     </div>
 
                     <div class="name">
@@ -120,7 +120,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="smb_image">
-                        <img src="./images/jambay.jpg" id="smbpic">
+                        <img src="<?php echo base_url();?>upload/jambay.jpg" id="smbpic">
                     </div>
 
                     <div class="name">
@@ -138,7 +138,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="smb_image">
-                        <img src="./images/phuntsho.jpg" id="smbpic">
+                        <img src="<?php echo base_url();?>upload/phuntsho.jpg" id="smbpic">
                     </div>
 
                     <div class="name">
@@ -156,7 +156,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="smb_image">
-                        <img src="./images/jiwan.jpg" id="smbpic">
+                        <img src="<?php echo base_url();?>upload/jiwan.jpg" id="smbpic">
                     </div>
 
                     <div class="name">
@@ -174,7 +174,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="smb_image">
-                        <img src="./images/Tashi Wangdi.jpg" id="smbpic">
+                        <img src="<?php echo base_url();?>upload/Tashi Wangdi.jpg" id="smbpic">
                     </div>
 
                     <div class="name">
@@ -215,7 +215,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/sangay.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/sangay.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -244,7 +244,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/tshewang.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/tshewang.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -270,7 +270,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Sonam Phuntsho.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Sonam Phuntsho.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -295,7 +295,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/PD.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/PD.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -320,7 +320,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Karma.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Karma.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -345,7 +345,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/lham.png" id="tpic">
+                        <img src="<?php echo base_url();?>upload/lham.png" id="tpic">
                     </div>
 
                     <div class="name">
@@ -370,7 +370,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Sonam Jorden.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Sonam Jorden.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -395,7 +395,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Phurpa Thinley.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Phurpa Thinley.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -420,7 +420,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/phub.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/phub.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -515,7 +515,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/chencho.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/chencho.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -544,7 +544,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Kesang Choden.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Kesang Choden.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -570,7 +570,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/P C Wangchuk.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/P C Wangchuk.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -595,7 +595,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Karma Sonam Zangmo.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Karma Sonam Zangmo.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -620,7 +620,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Pema Yangden.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Pema Yangden.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -645,7 +645,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Ugyen Tshering.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Ugyen Tshering.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -670,7 +670,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/yang.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/yang.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -695,7 +695,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Dechen.png" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Dechen.png" id="tpic">
                     </div>
 
                     <div class="name">
@@ -720,7 +720,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Pema choden.png" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Pema choden.png" id="tpic">
                     </div>
 
                     <div class="name">
@@ -793,7 +793,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Bishlal Biswa.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Bishlal Biswa.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -822,7 +822,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Syed A. Haque.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Syed A. Haque.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -847,7 +847,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/yeshey.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/yeshey.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -872,7 +872,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/jambay.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/jambay.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -897,7 +897,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/choden.png" id="tpic">
+                        <img src="<?php echo base_url();?>upload/choden.png" id="tpic">
                     </div>
 
                     <div class="name">
@@ -922,7 +922,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/kezang choden c.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/kezang choden c.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -947,7 +947,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Rinzin Phelgay.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Rinzin Phelgay.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -972,7 +972,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Dorji wangchuk.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Dorji wangchuk.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -997,7 +997,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/chimi wangchuk.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/chimi wangchuk.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1022,7 +1022,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/sangay (1).jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/sangay (1).jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1098,7 +1098,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/sippy parjule.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/sippy parjule.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1127,7 +1127,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Susmika .jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Susmika .jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1152,7 +1152,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Namgay Lhaden.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Namgay Lhaden.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1177,7 +1177,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/nan.png" id="tpic">
+                        <img src="<?php echo base_url();?>upload/nan.png" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1202,7 +1202,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Sangeeta Chhetri.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Sangeeta Chhetri.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1227,7 +1227,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Sonam Wangchuk.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Sonam Wangchuk.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1252,7 +1252,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/sangay choden.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/sangay choden.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1277,7 +1277,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/pravin.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/pravin.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1302,7 +1302,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/jigme norbu.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/jigme norbu.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1327,7 +1327,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/dorji.png" id="tpic">
+                        <img src="<?php echo base_url();?>upload/dorji.png" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1352,7 +1352,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Tsheten.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Tsheten.jpg" id="tpic">
                     </div>
 
                     <div class="name">
@@ -1377,7 +1377,7 @@
             <div class="Teacher-card">
                 <div class="Tcard-content">
                     <div class="image">
-                        <img src="./images/Kezang.jpg" id="tpic">
+                        <img src="<?php echo base_url();?>upload/Kezang.jpg" id="tpic">
                     </div>
 
                     <div class="name">

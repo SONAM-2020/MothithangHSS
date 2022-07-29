@@ -2,7 +2,7 @@
     <div class="nav-bar">
         <div class="logo">
             <a href="../home/home.html">
-                <img src="../NavPage/logo.png" alt="Mhss_logo">
+                <img src="<?php echo base_url();?>upload/logo.png" alt="Mhss_logo">
             </a>
             <a href="../home/home.html">
                 <p>Motithang Higher Secondary School</p>
@@ -11,7 +11,7 @@
         <input type="checkbox" id="side-menu" class="hide">
         <div class="menu">
             <label for="side-menu" class="menu">
-                <img src="../NavPage/hambar.png" alt="">
+                <img src="<?php echo base_url();?>upload/hambar.png" alt="">
                 <p>Menu</p>
             </label>
         </div>
@@ -19,7 +19,7 @@
         <div class="nav-menu-header">
             <div class="logo">
                 <a href="../home/home.html">
-                    <img src="../NavPage/logo.png" alt="Mhss_logo">
+                    <img src="<?php echo base_url();?>upload/logo.png" alt="Mhss_logo">
                 </a>
                 <a href="../home/home.html">
                     <p>Motithang Higher Secondary School</p>
@@ -29,7 +29,7 @@
             <div class=" close">
                 <label for="side-menu" class = "menu">
                     <p >Close</p>
-                    <img src="../NavPage/close.png" alt="">
+                    <img src="<?php echo base_url();?>upload/close.png" alt="">
                 </label>
                 
             </div>
@@ -160,7 +160,7 @@
        </div>
     </div>
     <div class="img-container">
-        <img src="../image/Mhss 1.png" alt="image" class="image1">
+        <img src="<?php echo base_url();?>upload/Mhss 1.png" alt="image" class="image1">
         <p class="historyTopic">HISTORY</p>
     </div>
     <nav>
@@ -203,7 +203,7 @@
         </div>
         
         <div class="last">
-            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <img src="<?php echo base_url();?>upload/principal.png" alt="principal" class="principal_img">
             <div class="name-container">
                 <p class="Pname">
                     MR. SANGAY KHANDU
@@ -218,7 +218,7 @@
     </div>
     <div class="prin_container">
         <div class="first">
-            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <img src="<?php echo base_url();?>upload/principal.png" alt="principal" class="principal_img">
             <div class="name-container">
                 <p class="Pname">
                     MR. NORBU GYELTSHENS
@@ -238,7 +238,7 @@
         </div>
 
         <div class="last">
-            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <img src="<?php echo base_url();?>upload/principal.png" alt="principal" class="principal_img">
             <div class="name-container">
                 <p class="Pname">
                     MRS. KARMA ZANGMO
@@ -253,7 +253,7 @@
     </div>
     <div class="prin_container">
         <div class="first">
-            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <img src="<?php echo base_url();?>upload/principal.png" alt="principal" class="principal_img">
             <div class="name-container">
                 <p class="Pname">
                     MRS. MAINA KHARGA
@@ -273,7 +273,7 @@
         </div>
         
         <div class="last">
-            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <img src="<?php echo base_url();?>upload/principal.png" alt="principal" class="principal_img">
             <div class="name-container">
                 <p class="Pname">
                     MRS. PEM SHERAB
@@ -288,7 +288,7 @@
     </div>
     <div class="prin_container">
         <div class="first">
-            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <img src="<?php echo base_url();?>upload/principal.png" alt="principal" class="principal_img">
             <div class="name-container">
                 <p class="Pname">
                     AUM GAGEY LHAM
@@ -307,7 +307,7 @@
         <div class="first"></div>
         
         <div class="last">
-            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <img src="<?php echo base_url();?>upload/principal.png" alt="principal" class="principal_img">
             <div class="name-container">
                 <p class="Pname">
                     MRS. NAMGAY OM
@@ -322,7 +322,7 @@
     </div>
     <div class="prin_container">
         <div class="first noborder" >
-            <img src="./image/principal.png" alt="principal" class="principal_img">
+            <img src="<?php echo base_url();?>upload/principal.png" alt="principal" class="principal_img">
             <div class="name-container">
                 <p class="Pname">
                     MR. A DHAR

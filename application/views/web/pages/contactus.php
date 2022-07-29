@@ -1,5 +1,5 @@
 <div class="img-container">
-        <img src="../image/contactus.png" alt="image" class="image1">
+        <img src="<?php echo base_url();?>upload/contactus.png" alt="image" class="image1">
         <p class="f_contactus">Contact Us</p>
     </div>
    

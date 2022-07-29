@@ -8,7 +8,7 @@
     <div class="news_detail_container">
         <div class="detail_image">
             <span class="image_size">
-                <img src="../image/news.png" alt="News Image">
+                <img src="<?php echo base_url();?>upload/news.png" alt="News Image">
             </span>
         </div>
         
@@ -48,7 +48,7 @@
         <div class="more_news_event">
             <div class="overlay">
                 <a href="" class="specific_event">
-                    <img src="../image/Event1.png" alt="Event Image">
+                    <img src="<?php echo base_url();?>upload/Event1.png" alt="Event Image">
                     
                     <div class="specific_event_name">
                         <p class="specific_event_title">
@@ -66,7 +66,7 @@
         <div class="more_news_event">
             <div class="overlay">
                 <a href="" class="specific_event">
-                    <img src="../image/Event1.png" alt="Event Image">
+                    <img src="<?php echo base_url();?>upload/Event1.png" alt="Event Image">
                     
                     <div class="specific_event_name">
                         <p class="specific_event_title">
@@ -84,7 +84,7 @@
         <div class="more_news_event">
             <div class="overlay">
                 <a href="" class="specific_event">
-                    <img src="../image/Event1.png" alt="Event Image">
+                    <img src="<?php echo base_url();?>upload/Event1.png" alt="Event Image">
                     
                     <div class="specific_event_name">
                         <p class="specific_event_title">
