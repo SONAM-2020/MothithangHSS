@@ -11,17 +11,29 @@ class BaseController extends CI_Controller {
         $this->load->view('web/index');
     }
     function loadpage($param1="",$param2=""){
-        if($param1=="announcement"){
+
+
+        if($param1=="about"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/pages/announcement', $page_data);   
+            $this->load->view('web/pages/about', $page_data);   
         }
+        if($param1=="contactus"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/contactus', $page_data);   
+        }
+        if($param1=="countrytopper"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/countrytopper', $page_data);   
+        }
+
+        if($param1=="detailnews"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/detailnews', $page_data);   
+        }
+
         if($param1=="history"){
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/history', $page_data);   
-        }
-        if($param1=="login"){
-            $page_data['linktype']=$param1;
-            $this->load->view('web/login/login', $page_data);   
         }
     }
     function login(){

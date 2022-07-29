@@ -7,9 +7,20 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => '127.0.0.1',
 	'username' => 'root',
+<<<<<<< HEAD
 	// iloveMSQL123 - ikigai
+<<<<<<< HEAD
 	//'password' => 'iloveMSQL123',
 	'password' => 'root',
+=======
+	// 'password' => 'iloveMSQL123',
+	'password' => '12210093',
+=======
+	// iloveMSQL123 - ikigai,
+	'password' => '12210093',
+	'password' => 'iloveMSQL123',
+>>>>>>> 41d63348f24cfdf5ab38743c1b054a98c0a60522
+>>>>>>> dbecd9c03be0bd03c9023847c7679368f6633bec
 	'database' => 'mhss',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
