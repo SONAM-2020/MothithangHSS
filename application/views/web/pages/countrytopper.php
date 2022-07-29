@@ -1,5 +1,5 @@
 <div class="img-container">
-    <img src="../image/contactus.png" alt="image" class="image1">
+    <img src="<?php echo base_url();?>upload/contactus.png" alt="image" class="image1">
     <p class="country_Topper">Country Topper</p>
 </div>
 
@@ -29,7 +29,7 @@
             </div>
             <div class="school_topper">
                 <div class="topper_image">
-                    <img src="../image/topper.jpg" alt="topper_image">
+                    <img src="<?php echo base_url();?>uploade/topper.jpg" alt="topper_image">
                 </div>
                 
                 <div class="overlay">
@@ -48,47 +48,9 @@
 
             <div class="school_topper">
                 <div class="topper_image">
-                    <img src="../image/topper.jpg" alt="topper_image">
+                    <img src="<?php echo base_url();?>upload/topper.jpg" alt="topper_image">
                 </div>
                 
-                <div class="overlay">
-                    <p>
-                        Topped the country with 89%
-                    </p>
-                </div>
-                
-                <p class="topper_name">
-                    Dorji Thogmay
-                </p>
-                <p class="year"> 
-                    2016 BCSE Topper <span class="res_view"> - 89%  </span>
-                </p>
-            </div>
-            
-            <div class="school_topper">
-                <div class="topper_image">
-                    <img src="../image/topper.jpg" alt="topper_image">
-                </div>
-                
-                <div class="overlay">
-                    <p>
-                        Topped the country with 89%
-                    </p>
-                </div>
-
-                <p class="topper_name">
-                    Dorji Thogmay
-                </p>
-                <p class="year"> 
-                    2016 BCSE Topper <span class="res_view"> - 89%  </span>
-                </p>
-            </div>
-
-            <div class="school_topper">
-                <div class="topper_image">
-                    <img src="../image/topper.jpg" alt="topper_image">
-                </div>
-
                 <div class="overlay">
                     <p>
                         Topped the country with 89%
@@ -105,7 +67,45 @@
             
             <div class="school_topper">
                 <div class="topper_image">
-                    <img src="../image/topper.jpg" alt="topper_image">
+                    <img src="<?php echo base_url();?>upload/topper.jpg" alt="topper_image">
+                </div>
+                
+                <div class="overlay">
+                    <p>
+                        Topped the country with 89%
+                    </p>
+                </div>
+
+                <p class="topper_name">
+                    Dorji Thogmay
+                </p>
+                <p class="year"> 
+                    2016 BCSE Topper <span class="res_view"> - 89%  </span>
+                </p>
+            </div>
+
+            <div class="school_topper">
+                <div class="topper_image">
+                    <img src="<?php echo base_url();?>upload/topper.jpg" alt="topper_image">
+                </div>
+
+                <div class="overlay">
+                    <p>
+                        Topped the country with 89%
+                    </p>
+                </div>
+                
+                <p class="topper_name">
+                    Dorji Thogmay
+                </p>
+                <p class="year"> 
+                    2016 BCSE Topper <span class="res_view"> - 89%  </span>
+                </p>
+            </div>
+            
+            <div class="school_topper">
+                <div class="topper_image">
+                    <img src="<?php echo base_url();?>upload/topper.jpg" alt="topper_image">
                 </div>
 
                 <div class="overlay">
@@ -124,7 +124,7 @@
 
             <div class="school_topper">
                 <div class="topper_image">
-                    <img src="../image/topper.jpg" alt="topper_image">
+                    <img src="<?php echo base_url();?>upload/topper.jpg" alt="topper_image">
                 </div>
                 
                 <div class="overlay">
