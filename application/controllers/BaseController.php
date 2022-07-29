@@ -7,6 +7,7 @@ class BaseController extends CI_Controller {
         parent::_construct();
     }
     public function index(){
+        //die('i am here');
         $this->load->view('web/index');
     }
     function loadpage($param1="",$param2=""){
@@ -18,7 +19,69 @@ class BaseController extends CI_Controller {
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/history', $page_data);   
         }
+        if($param1=="login"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/login/login', $page_data);   
+        }
     }
+    function login(){
+         $page_data['message']="";
+        if($this->input->post('email')!="" &&  $this->input->post('password')!=""){
+            $query = $this->db->get_where('t_user', array('Email_Id' => $this->input->post('email')));
+            if ($query->num_rows() > 0){
+                $row = $query->row_array(); 
+                if(password_verify($this->input->post('password'), $row['Password'])){
+                    if($row['Status']=="InActive"){
+                     $page_data['messagefail']='Your user detail is deactivated. Please contact system administrator.';
+                          $this->load->view('web/login',$page_data );
+                          return FALSE; 
+                    }
+                    else{
+                        $this->session->set_userdata('User_Id', $row['Id']);
+                        $this->session->set_userdata('Image', $row['Image']);
+                        $this->session->set_userdata('Name', $row['Name']);
+                        $this->session->set_userdata('Email_Id', $row['Email_Id']);
+                        $this->session->set_userdata('Mobile_Number', $row['Mobile_Number']);
+                        $this->session->set_userdata('Role_Id', $row['Role_Id']);
+                        redirect(base_url() . 'index.php?baseController/dashboard', 'refresh');
+                    }  
+                }
+                else{
+                    $page_data['message'] = '<div class="alert alert-danger">Wrong Password! </div>';
+                    $this->load->view('web/login',$page_data );
+                    return FALSE; 
+                }
+            } 
+            else{
+                 $page_data['message'] = '<div class="alert alert-danger">Your email and password mismatch. please try agin or use forgot password if you are not sure with current password</div>';
+                $this->load->view('web/login',$page_data );
+                return FALSE;
+            }
+        } 
+        else{
+            $page_data['message'] = '';
+            $this->load->view('web/login',$page_data ); 
+        }
+    }
+
+    function dashboard($param=""){
+        $page_data['message']="";
+        if ($this->session->userdata('User_Id') == null ){
+            redirect(base_url(), 'refresh');
+        }
+        else{
+            $this->load->view('admin/dashboard', $page_data);
+        }
+    }
+    function logout($param=''){  
+        $this->session->unset_userdata(0);
+        $this->session->sess_destroy();
+        $this->session->set_flashdata('logout_notification', 'logged_out');
+        redirect(base_url().'index.php?baseController/', 'refresh');
+    }
+
+
+
     function linkresetpassword(){
         $page_data['message']="";
         $page_data['messagefail']="";
