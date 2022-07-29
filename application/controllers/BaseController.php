@@ -10,13 +10,57 @@ class BaseController extends CI_Controller {
         $this->load->view('web/index');
     }
     function loadpage($param1="",$param2=""){
+
+
+        if($param1=="about"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/about', $page_data);   
+        }
+        if($param1=="contactus"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/contactus', $page_data);   
+        }
+        if($param1=="countrytopper"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/countrytopper', $page_data);   
+        }
+
+        if($param1=="detailnews"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/detailnews', $page_data);   
+        }
+
+        if($param1=="history"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/history', $page_data);   
+        }
+
+        if($param1=="NewsEvents"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/NewsEvents', $page_data);   
+        }
+
+        if($param1=="result"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/result', $page_data);   
+        }
+        if($param1=="staff_profiles"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/staff_profiles', $page_data);   
+        }
+
         if($param1=="announcement"){
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/announcement', $page_data);   
         }
-        if($param1=="history"){
+
+        if($param1=="alumni"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/pages/history', $page_data);   
+            $this->load->view('web/pages/alumni', $page_data);   
+        }
+        if($param1=="home"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/includes/home', $page_data);   
         }
     }
     function linkresetpassword(){
