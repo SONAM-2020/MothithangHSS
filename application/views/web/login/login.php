@@ -44,7 +44,6 @@
     <br>
     <button class="button1" onclick="login()">Login</button>
     <br><br><br>
-//this is git issues
   </form>
 </div>
 </div>

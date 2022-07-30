@@ -61,7 +61,7 @@
               </td>
               <td>
                 <button type="button" class="btn btn-primary btn-block" onclick="viewsliderDetail('<?php echo $event['Id'];?>')" type="button"><i class="fa fa-eye"></i> View/Edit</button> 
-                <button type="button" class="btn btn-block btn-danger"  onclick="deleteinfo('<?php echo $event['Id']?>')" ><i class="fa fa-edit"></i>Delete</button> 
+                <button type="button" class="btn btn-block btn-danger"  onclick="deleteSlider('<?php echo $event['Id']?>')" ><i class="fa fa-edit"></i>Delete</button> 
               </td>
               </tr>
               <?php endforeach;?>
@@ -200,5 +200,23 @@ function addsliderinfo(){
     $("#mainContentdiv").load(url);
       setTimeout($.unblockUI, 1000); 
   }
+   function deleteSlider(id){
+      $.blockUI
+          ({ 
+            css: 
+            { 
+                  border: 'none', 
+                  padding: '15px', 
+                  backgroundColor: '#000', 
+                  '-webkit-border-radius': '10px', 
+                  '-moz-border-radius': '10px', 
+                  opacity: .5, 
+                  color: '#fff' 
+            } 
+          });
+        var url='<?php echo base_url();?>index.php?adminController/DeleteSlider/'+id+'/homeslider';
+         $("#mainContentdiv").load(url);
+         setTimeout($.unblockUI, 1000);
+    }
   </script>
    
