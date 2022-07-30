@@ -8,7 +8,6 @@ class AdminController extends CI_Controller {
     function loadpage($param1="",$param2="",$param3=""){
         $page_data['formSubmit']="";
         if($param1=="AddUsers"){
-            $page_data['t_role'] = $this->db->get_where('t_role',array('Status'=>'Active'))->result_array();
             $page_data['t_user'] = $this->db->get('t_user')->result_array();
             $this->load->view('admin/pages/systemusers', $page_data);
         }
@@ -16,9 +15,10 @@ class AdminController extends CI_Controller {
             $page_data['t_slider'] = $this->db->get('t_homeslider')->result_array();
             $this->load->view('admin/pages/homeslider', $page_data);
         }
-        if($param1=="featuredproduct"){
-            $page_data['t_featuredproduct'] = $this->db->get('t_featuredproduct')->result_array();
-            $this->load->view('admin/pages/featuredproduct', $page_data);
+        if($param1=="Viewsliderinformation"){
+           $page_data['t_slider'] = $this->db->get_where('t_homeslider', array(
+            'Id' => $param2))->row();
+            $this->load->view('admin/pages/editslider', $page_data);
         }
         if($param1=="Addsidedisplay"){
             $page_data['t_sidedisplay'] = $this->db->get('t_sidedisplay')->result_array();
@@ -33,21 +33,24 @@ class AdminController extends CI_Controller {
             $this->load->view('admin/pages/offer', $page_data);
         }
     }
+
+    function loadsliderdetails($id=""){
+            $page_data['t_slider'] = $this->db->get_where('t_slider',array('Id'=>$id))->result_array();
+        $this->load->view('web/pages/viewshedradetails', $page_data);
+    }
     function AddSystemUsers($page=""){
         $page_data['message']="";
         $page_data['messagefail']="";
-        $data['Email']=$this->input->post('Email');
-        $data['Password']=password_hash("bt@2022", PASSWORD_BCRYPT);
-        $data['Contact_No']=$this->input->post('Phone');
+        $data['Email_Id']=$this->input->post('Email');
+        $data['Password']=password_hash("mhss@2022", PASSWORD_BCRYPT);
+        $data['Mobile_Number']=$this->input->post('Phone');
         $data['Name']=$this->input->post('Name');
-        $data['Role_Id']=$this->input->post('role');
-        $data['Entry_by']=$this->session->userdata('User_Id');
         $data['Created_date']=date('Y-m-d h:i:s');
-        $this->CommonModel->do_insert('t_user_master', $data); 
+        $this->CommonModel->do_insert('t_user', $data); 
 
 
         $page_data['t_role'] = $this->db->get_where('t_role',array('Status'=>'Active'))->result_array();
-        $page_data['t_user'] = $this->db->get('t_user_master')->result_array();
+        $page_data['t_user'] = $this->db->get('t_user')->result_array();
         if($this->db->affected_rows()>0){
             $page_data['message']="<div class='alert alert-success alert-dismissible'>User has been successfully Created</div>";
         }
@@ -59,13 +62,11 @@ class AdminController extends CI_Controller {
     function EditSystemUsers(){
         $data['Name']=$this->input->post('Name1');
         $data['Status']=$this->input->post('status');
-        $data['Contact_No']=$this->input->post('Phone1');
-        $data['Email']=$this->input->post('Email1');
-        $data['Designation']=$this->input->post('Designation2');
-        // $data['Password']=password_hash($this->input->post('Password'), PASSWORD_BCRYPT);
+        $data['Mobile_Number']=$this->input->post('Phone1');
+        $data['Email_Id']=$this->input->post('Email1');
         $this->db->where('Id', $this->input->post('EditId'));
-        $this->db->update('t_user_master', $data);
-        $page_data['t_user'] = $this->db->get('t_user_master')->result_array();
+        $this->db->update('t_user', $data);
+        $page_data['t_user'] = $this->db->get('t_user')->result_array();
         $page_data['message']="<div class='alert alert-success alert-dismissible'>User has been Editted successfully</div>";
         $this->load->view('admin/pages/systemusers', $page_data); 
     }
@@ -74,14 +75,9 @@ class AdminController extends CI_Controller {
         $data['Desicription']=$this->input->post('Description');
         $data['URL']=$this->input->post('pageurl');
         $data['Status']='Active';
-        $new_file_name = $_FILES["Image"]["name"];
-        $file_directory = "uploads/slider/";
-        if(!is_dir($file_directory)){
-            mkdir($file_directory,0777,TRUE);
-        }
-        if($new_file_name!=""){
-          move_uploaded_file($_FILES["Image"]["tmp_name"], $file_directory . $new_file_name);
-          $data['image']=$file_directory . $new_file_name;
+        if(!empty($_FILES["Image"]["name"])){
+            move_uploaded_file($_FILES['Image']['tmp_name'],'./uploads/slider/'.$_FILES["Image"]["name"]);
+            $data['image']=$_FILES["Image"]["name"];
         }
          $this->CommonModel->do_insert('t_homeslider', $data);
          $page_data['t_slider'] = $this->db->get('t_homeslider')->result_array();
@@ -93,6 +89,32 @@ class AdminController extends CI_Controller {
         }
         $this->load->view('admin/pages/homeslider', $page_data); 
 
+    }
+    function Editslider(){
+        $data['Name']=$this->input->post('Name1');
+        $data['Desicription']=$this->input->post('Description1');
+        $data['Status']= $this->input->post('status1');
+        $new_file_name = $_FILES["Image"]["name"];
+
+       if(!empty($_FILES["Image"]["name"])){
+                $fle="../uploads/slider/".$this->input->post('currentlogoinivalue');
+                if (file_exists($fle)){
+                    unlink($fle);
+                }
+                move_uploaded_file($_FILES['Image']['tmp_name'],'./uploads/slider/'.$_FILES["Image"]["name"]);
+                $data['image']=$_FILES["Image"]["name"];
+            }
+
+        $this->db->where('Id', $this->input->post('updateId'));
+        $this->db->update('t_homeslider', $data);
+         $page_data['t_slider'] = $this->db->get('t_homeslider')->result_array();
+         if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>Slider has been successfully Created</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create Slider. Please Try Again!";
+        }
+        $this->load->view('admin/pages/homeslider', $page_data); 
     }
     function Addfeatureproduct(){
         $data['Name']=$this->input->post('Name');

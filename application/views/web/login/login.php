@@ -10,12 +10,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="<?php echo base_url();?>assest/website/style.css">
 </head>
-<body>
-<br><br>
+<style type="text/css">
+  .button1 {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+  }
+</style>
+<body id="mainpublicContent">
 <div id="login-form-wrap">
-<br><br>
-  <h3> Administrator Login</h3>
-  <br><br>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-la-12">
+    <div class="row">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-la-2"></div>
+    <div class="col-xs-8 col-sm-8 col-md-8 col-la-8">
+      <h3> Administrator Login</h3>
     <?php echo form_open('?baseController/login' , array('class' =>'form-horizontal','id' => 'login-form'));?>
     <?php if($message!=''){?>
       <div class="form-group has-feedback" id="mismatcherr" >
@@ -25,26 +35,23 @@
       </div>
     <?php }?>
     <span id="messagetodisplay"></span>
-    <p>
-      <label>Email Address</label>
-     <input type="email" name="email" onclick="remove_err('email_err')" id="email">
-     <span id="email_err" class="text-danger"></span>
-    </p>
-    <br>
-    <p>
-      <label>Password</label>
+    <label>Email Address</label>
+    <input type="email" name="email" onclick="remove_err('email_err')" id="email">
+    <span id="email_err" class="text-danger"></span>
+    <label>Password</label>
     <input type="password" id="password" onclick="remove_err('password_err')" name="password" >
     <span id="password_err" class="text-danger"></span>
-    </p>
     <br>
-    <p>
-    <button style="background-color: green;" class="register-button mt-0" onclick="login()">Login</button>
-    </p>
+    <button class="button1" onclick="login()">Login</button>
+    <br><br><br>
+
   </form>
-  <br><br><br>
-  <div id="create-account-wrap">
-  </div>
 </div>
+</div>
+</div>
+</div>
+
+
 <script>
 function login(){
   if(validate()){
