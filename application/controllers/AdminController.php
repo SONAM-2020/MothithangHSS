@@ -116,6 +116,23 @@ class AdminController extends CI_Controller {
         }
         $this->load->view('admin/pages/homeslider', $page_data); 
     }
+
+    function DeleteSlider($productid="",$page=""){ 
+        $page_data['t_slider'] = $this->db->get('t_homeslider')->result_array();
+        $page_data['message']="";
+        $page_data['messagefail']="";
+        $this->db->where('Id', $productid);
+        $this->db->delete('t_homeslider');
+        if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>Slider has been deleted successfully</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete Slider. Please Try Again!";
+        }
+        $this->load->view('admin/pages/homeslider', $page_data); 
+        }
+
+
     function Addfeatureproduct(){
         $data['Name']=$this->input->post('Name');
         $data['Description']=$this->input->post('Description');
@@ -142,28 +159,7 @@ class AdminController extends CI_Controller {
 
     }
 
-    function Addsidedisplay(){
-        $data['Status']='Active';
-        $new_file_name = $_FILES["Image"]["name"];
-        $file_directory = "uploads/sidedisplay/";
-        if(!is_dir($file_directory)){
-            mkdir($file_directory,0777,TRUE);
-        }
-        if($new_file_name!=""){
-          move_uploaded_file($_FILES["Image"]["tmp_name"], $file_directory . $new_file_name);
-          $data['image']=$file_directory . $new_file_name;
-        }
-         $this->CommonModel->do_insert('t_sidedisplay', $data);
-         $page_data['t_sidedisplay'] = $this->db->get('t_sidedisplay')->result_array();
-         if($this->db->affected_rows()>0){
-            $page_data['message']="<div class='alert alert-success alert-dismissible'>Side Display has been successfully Created</div>";
-        }
-        else{
-            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to Side Display. Please Try Again!";
-        }
-        $this->load->view('admin/pages/sidedisplay', $page_data); 
-
-    }
+    
     function Addnews(){
         $data['Name']=$this->input->post('Name');
         $data['Description']=$this->input->post('Description');
@@ -190,32 +186,7 @@ class AdminController extends CI_Controller {
         $this->load->view('admin/pages/News', $page_data); 
 
     }
-    function AddOffers(){
-        $data['Name']=$this->input->post('Name');
-        $data['Description']=$this->input->post('Description');
-        $data['Type']=$this->input->post('type');
-        $data['Status']='Active';
-        $data['Date']=date('Y-m-d');
-        $new_file_name = $_FILES["Image"]["name"];
-        $file_directory = "uploads/News/";
-        if(!is_dir($file_directory)){
-            mkdir($file_directory,0777,TRUE);
-        }
-        if($new_file_name!=""){
-          move_uploaded_file($_FILES["Image"]["tmp_name"], $file_directory . $new_file_name);
-          $data['image']=$file_directory . $new_file_name;
-        }
-         $this->CommonModel->do_insert('t_offers', $data);
-         $page_data['t_offers'] = $this->db->get('t_news')->result_array();
-         if($this->db->affected_rows()>0){
-            $page_data['message']="<div class='alert alert-success alert-dismissible'>Offers has been successfully Created</div>";
-        }
-        else{
-            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create Offers. Please Try Again!";
-        }
-        $this->load->view('admin/pages/offer', $page_data); 
-
-    }
+    
 
     function UpdateUserDetails(){
         $data['Mobile_Number']=$this->input->post('Phone');
