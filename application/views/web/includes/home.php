@@ -1,53 +1,23 @@
 <div class="home-content">
         <div class="slider-container">
             <input type="radio" checked = true class = "1"name = "home-slider-btn" id = "home-slide1">
-            <input type="radio" name = "home-slider-btn" class = "2"id = "home-slide2">
-            <input type="radio" name = "home-slider-btn" class = "3"id = "home-slide3">
-            <input type="radio" name = "home-slider-btn" class = "4" id = "home-slide4">
             <div class="slider-nav">
                 <label for="home-slide1" class = "slider-btn"></label>
-                <label for="home-slide2" class = "slider-btn"></label>
-                <label for="home-slide3" class = "slider-btn"></label>
-                <label for="home-slide4" class = "slider-btn"></label>
             </div>
             <div class="auto-slidenav">
                 <div class="auto-slide1"></div>
-                <div class="auto-slide2"></div>
-                <div class="auto-slide3"></div>
-                <div class="auto-slide4"></div>
             </div>
+            <?php foreach($t_homeslider as $i=> $event): ?>
             <div class="slider first-slide">
-                <img src="<?php echo base_url();?>upload/slider1.png" alt="">
+                <img src="<?php echo base_url();?>uploads/slider/<?php echo$event['Image'];?>"></" alt="">
                 <div class="slider-content">
-                    <h1>STAY UPDATED</h1>
-                    <p class = "home-center">Keep up to date with the latest events, news and announcements</p>
-                    <a href= "../newsEvents/NewsEvents.html" class = "home-center"><button>Learn More</button></a>
+                    <h1><?php echo $event['Name'];?></h1>
+                    <p class = "home-center"><?php echo $event['Desicription'];?></p>
+                    <a href= "<?php echo $event['URL'];?>" class = "home-center"><button>Learn More</button></a>
                 </div>
             </div>
-            <div class="slider">
-                <img src="<?php echo base_url();?>upload/slider2.png" alt="">
-                <div class="slider-content">
-                    <h1>EVERY DAY</h1>
-                    <p class = "home-center">We strive to uphold THA-DAMTSE and LAY-JUM-DERY while upholding a nurturing enviroment</p>
-                    <a href= "../about/about.html" class = "home-center"><button>Learn More</button></a>
-                </div>
-            </div>
-            <div class="slider">
-                <img src="<?php echo base_url();?>upload/slider3.png" alt="">
-                <div class="slider-content">
-                    <h1>WE BELIEVE</h1>
-                    <p class = "home-center">In leading by example, having a strong sense of belonging and prioritizing mental health.</p>
-                    <a href="" class = "home-center"><button>Learn More</button></a>
-                </div>
-            </div>
-            <div class="slider">
-                <img src="<?php echo base_url();?>upload/slider4.png" alt="">
-                <div class="slider-content">
-                    <h1>ACADEMICS</h1>
-                    <p class = "home-center">View the academic toppers of the year, get access to your results or download past papers</p>
-                    <a href="../result/result.html" class = "home-center"><button>Learn More</button></a>
-                </div>
-            </div>
+            <?php endforeach;?>              
+            
         </div>
         <div class="mi-vi">
         <div class="mivi-container">
