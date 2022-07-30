@@ -70,6 +70,22 @@ class AdminController extends CI_Controller {
         $page_data['message']="<div class='alert alert-success alert-dismissible'>User has been Editted successfully</div>";
         $this->load->view('admin/pages/systemusers', $page_data); 
     }
+
+    function DeleteUser($productid="",$page=""){ 
+        $page_data['message']="";
+        $page_data['messagefail']="";
+        $this->db->where('Id', $productid);
+        $this->db->delete('t_user');
+        if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>User has been deleted successfully</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete userDetils. Please Try Again!";
+        }
+        $page_data['t_user'] = $this->db->get('t_user')->result_array();
+        $this->load->view('admin/pages/systemusers', $page_data); 
+        }
+
     function Addslider(){
         $data['Name']=$this->input->post('Name');
         $data['Desicription']=$this->input->post('Description');
@@ -118,7 +134,6 @@ class AdminController extends CI_Controller {
     }
 
     function DeleteSlider($productid="",$page=""){ 
-        $page_data['t_slider'] = $this->db->get('t_homeslider')->result_array();
         $page_data['message']="";
         $page_data['messagefail']="";
         $this->db->where('Id', $productid);
@@ -129,6 +144,7 @@ class AdminController extends CI_Controller {
         else{
             $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete Slider. Please Try Again!";
         }
+        $page_data['t_slider'] = $this->db->get('t_homeslider')->result_array();
         $this->load->view('admin/pages/homeslider', $page_data); 
         }
 

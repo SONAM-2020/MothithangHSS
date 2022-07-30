@@ -65,6 +65,7 @@
               </td>
               <td>
                 <button type="button" class="btn btn-block btn-primary" onclick="editinfo('<?php echo $event['Id']?>','<?php echo $event['Email_Id']?>','<?php echo $event['Name']?>','<?php echo $event['Mobile_Number']?>','<?php echo $event['Status']?>')"><i class="fa fa-edit"></i>Edit</button> 
+                 <button type="button" class="btn btn-block btn-danger"  onclick="deleteuser('<?php echo $event['Id']?>')" ><i class="fa fa-edit"></i>Delete</button> 
               </td>
               </tr>
               <?php endforeach;?>
@@ -270,6 +271,24 @@ function addusersinfo(){
         retrtype=false;
       }
       return retrtype;
+    }
+     function deleteuser(id){
+      $.blockUI
+          ({ 
+            css: 
+            { 
+                  border: 'none', 
+                  padding: '15px', 
+                  backgroundColor: '#000', 
+                  '-webkit-border-radius': '10px', 
+                  '-moz-border-radius': '10px', 
+                  opacity: .5, 
+                  color: '#fff' 
+            } 
+          });
+        var url='<?php echo base_url();?>index.php?adminController/DeleteUser/'+id+'/systemusers';
+         $("#mainContentdiv").load(url);
+         setTimeout($.unblockUI, 1000);
     }
   </script>
    
