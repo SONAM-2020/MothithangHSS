@@ -38,6 +38,7 @@
                 </div>
             </div>
         </div>
+
     </div>
     <div class="an-ca-container">
         <div class="announcement-container">

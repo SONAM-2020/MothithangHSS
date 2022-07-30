@@ -20,24 +20,29 @@ class AdminController extends CI_Controller {
             'Id' => $param2))->row();
             $this->load->view('admin/pages/editslider', $page_data);
         }
-        if($param1=="Addsidedisplay"){
-            $page_data['t_sidedisplay'] = $this->db->get('t_sidedisplay')->result_array();
-            $this->load->view('admin/pages/sidedisplay', $page_data);
-        }
-        if($param1=="News"){
+       
+         if($param1=="newslist"){
             $page_data['t_news'] = $this->db->get('t_news')->result_array();
-            $this->load->view('admin/pages/News', $page_data);
+            $this->load->view('admin/pages/newslist', $page_data);
         }
-        if($param1=="offer"){
-            $page_data['t_offers'] = $this->db->get('t_offers')->result_array();
-            $this->load->view('admin/pages/offer', $page_data);
+
+         if($param1=="addnews"){
+            $this->load->view('admin/pages/addnews', $page_data);
         }
+        if($param1=="editnews"){
+            $page_data['t_news'] = $this->db->get_where('t_news', array(
+            'Id' => $param2))->row();
+            $this->load->view('admin/pages/editnews', $page_data);
+        }
+        
     }
 
     function loadsliderdetails($id=""){
             $page_data['t_slider'] = $this->db->get_where('t_slider',array('Id'=>$id))->result_array();
         $this->load->view('web/pages/viewshedradetails', $page_data);
     }
+
+    /* Adminstrator to Create/edit/delete system Users */
     function AddSystemUsers($page=""){
         $page_data['message']="";
         $page_data['messagefail']="";
@@ -59,6 +64,7 @@ class AdminController extends CI_Controller {
         }
         $this->load->view('admin/pages/systemusers', $page_data); 
     }
+
     function EditSystemUsers(){
         $data['Name']=$this->input->post('Name1');
         $data['Status']=$this->input->post('status');
@@ -70,6 +76,24 @@ class AdminController extends CI_Controller {
         $page_data['message']="<div class='alert alert-success alert-dismissible'>User has been Editted successfully</div>";
         $this->load->view('admin/pages/systemusers', $page_data); 
     }
+
+    function DeleteUser($productid="",$page=""){ 
+        $page_data['message']="";
+        $page_data['messagefail']="";
+        $this->db->where('Id', $productid);
+        $this->db->delete('t_user');
+        if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>User has been deleted successfully</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete userDetils. Please Try Again!";
+        }
+        $page_data['t_user'] = $this->db->get('t_user')->result_array();
+        $this->load->view('admin/pages/systemusers', $page_data); 
+        }
+
+
+/* Adminstrator to Create/edit/delete Home Slider */
     function Addslider(){
         $data['Name']=$this->input->post('Name');
         $data['Desicription']=$this->input->post('Description');
@@ -118,7 +142,6 @@ class AdminController extends CI_Controller {
     }
 
     function DeleteSlider($productid="",$page=""){ 
-        $page_data['t_slider'] = $this->db->get('t_homeslider')->result_array();
         $page_data['message']="";
         $page_data['messagefail']="";
         $this->db->where('Id', $productid);
@@ -129,38 +152,11 @@ class AdminController extends CI_Controller {
         else{
             $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete Slider. Please Try Again!";
         }
+        $page_data['t_slider'] = $this->db->get('t_homeslider')->result_array();
         $this->load->view('admin/pages/homeslider', $page_data); 
         }
 
-
-    function Addfeatureproduct(){
-        $data['Name']=$this->input->post('Name');
-        $data['Description']=$this->input->post('Description');
-        $data['Price']=$this->input->post('price');
-        $data['Status']='Active';
-        $new_file_name = $_FILES["Image"]["name"];
-        $file_directory = "uploads/FeatureProduct/";
-        if(!is_dir($file_directory)){
-            mkdir($file_directory,0777,TRUE);
-        }
-        if($new_file_name!=""){
-          move_uploaded_file($_FILES["Image"]["tmp_name"], $file_directory . $new_file_name);
-          $data['image']=$file_directory . $new_file_name;
-        }
-         $this->CommonModel->do_insert('t_featuredproduct', $data);
-         $page_data['t_featuredproduct'] = $this->db->get('t_featuredproduct')->result_array();
-         if($this->db->affected_rows()>0){
-            $page_data['message']="<div class='alert alert-success alert-dismissible'>Featured Product has been successfully Created</div>";
-        }
-        else{
-            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create Featured Product. Please Try Again!";
-        }
-        $this->load->view('admin/pages/featuredproduct', $page_data); 
-
-    }
-
-    
-    function Addnews(){
+function addingNews(){
         $data['Name']=$this->input->post('Name');
         $data['Description']=$this->input->post('Description');
         $data['Type']=$this->input->post('type');
@@ -175,7 +171,8 @@ class AdminController extends CI_Controller {
           move_uploaded_file($_FILES["Image"]["tmp_name"], $file_directory . $new_file_name);
           $data['image']=$file_directory . $new_file_name;
         }
-         $this->CommonModel->do_insert('t_news', $data);
+         
+        $this->CommonModel->do_insert('t_news', $data);
          $page_data['t_news'] = $this->db->get('t_news')->result_array();
          if($this->db->affected_rows()>0){
             $page_data['message']="<div class='alert alert-success alert-dismissible'>News & Announcement has been successfully Created</div>";
@@ -183,10 +180,50 @@ class AdminController extends CI_Controller {
         else{
             $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create News & Announcement. Please Try Again!";
         }
-        $this->load->view('admin/pages/News', $page_data); 
-
+        $this->load->view('admin/pages/newslist', $page_data); 
     }
-    
+function editingnews(){
+    $data['Name']=$this->input->post('Name');
+        $data['Description']=$this->input->post('Description');
+        $data['Type']=$this->input->post('type');
+        $data['Status']='Active';
+        $data['Date']=date('Y-m-d');
+        $new_file_name = $_FILES["Image"]["name"];
+        $file_directory = "uploads/News/";
+        if(!is_dir($file_directory)){
+            mkdir($file_directory,0777,TRUE);
+        }
+        if($new_file_name!=""){
+          move_uploaded_file($_FILES["Image"]["tmp_name"], $file_directory . $new_file_name);
+          $data['image']=$file_directory . $new_file_name;
+        }
+
+         $this->db->where('Id', $this->input->post('updateId'));
+        $this->db->update('t_news', $data);
+         $page_data['t_news'] = $this->db->get('t_news')->result_array();
+         if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>News & Announcement has been successfully Created</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create News & Announcement. Please Try Again!";
+        }
+        $this->load->view('admin/pages/newslist', $page_data);
+}
+
+ function Deletenews($productid="",$page=""){ 
+        $page_data['message']="";
+        $page_data['messagefail']="";
+        $this->db->where('Id', $productid);
+        $this->db->delete('t_news');
+        if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>News & Announcement has been deleted successfully</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete News & Announcement. Please Try Again!";
+        }
+        $page_data['t_news'] = $this->db->get('t_news')->result_array();
+        $this->load->view('admin/pages/newslist', $page_data); 
+        }
 
     function UpdateUserDetails(){
         $data['Mobile_Number']=$this->input->post('Phone');
