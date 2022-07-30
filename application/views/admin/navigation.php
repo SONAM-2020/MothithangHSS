@@ -30,8 +30,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/Addslider/')">Home Slider</a></li>
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/Addsidedisplay/')">Side Display</a></li>
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/News/')">News & Announcement</a></li>
+            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/newslist/')">News & Announcement</a></li>
           </ul>
         </li>
         <li class="treeview">

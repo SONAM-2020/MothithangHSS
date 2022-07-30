@@ -3,7 +3,7 @@
 ?>
 <section class="content-header">
   <h1>
-      Home Slider Management
+      Add News & Announcement
   </h1>
 </section>
 <section class="content">
@@ -37,30 +37,35 @@
                     <div class="form-group">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <label>Name:</label>
-                            <input type="text" id="Name1" name="Name1" class="form-control" value="<?=$t_slider->Name;?>">
+                            <input type="text" id="Name" name="Name" class="form-control" >
                         </div>
                       </div>
                     <div class="form-group">
                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <label>Description:</label>
-                          <textarea type="text" id="Description1" name="Description1" class="form-control summernote"><?=$t_slider->Desicription;?></textarea>
+                          <textarea type="text" id="Description" name="Description" class="form-control summernote"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
-                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <label>Slider Images:</label><span style="color: red;"><i>(Recommended Size:870x370px)</i></span>
-                        <img src="<?php echo base_url();?>uploads/slider<?=$t_slider->Image;?>" alt="no imaged" onerror="this.src='<?php echo base_url();?>upload/user.png'" width="30%" align="left">
-                        <input type="file" id="Image" name="Image">
-                        Choose image to change
-                        <input type="hidden" name="currentlogoinivalue" value="<?=$t_slider->Image;?>">
+                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                      <label>Upload News Images:<span class="text-danger">*</span></label><span style="color: red;"><i>(Image Size:780*480)</i></span>
+                        <input type="file" id="images" onchange="checkfilesize(this,'images','Image_err','addBtn')" onclick="remove_err('Image_err')" name="Image" class="form-control">
+                        <span id="Image_err" class="text-danger"></span>
                     </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <label>Type:</label>
+                          <select id="type" class="form-control" name="type">
+                            <option value="">News & Announcement Type</option>
+                            <option value="News">News</option>
+                            <option value="Announcement">Announcement</option>
+                          </select>
+                        </div>
                     </div>
                     <div class="form-group">
                       <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                       </div>
                       <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <input type="hidden" name="updateId" id="updateId" value="<?=$t_slider->Id;?>">
-                        <button type="button"  onclick="submitForm()" class="btn btn-success fa-pull-right btn-block"> Save Changes</button>
+                        <button type="button"  onclick="submitForm()" class="btn btn-success fa-pull-right btn-block"> Save</button>
                       </div>
                     </div>
                    </div>
@@ -78,22 +83,7 @@
     });
 </script>
 <script>
-    function validate(){
-      let returnt=true;
-      if($('#name').val()==""){
-        $('#name_err').html('Please mention Title');
-        $('#name').focus();
-        returnt=false;
-      }
-      if($('#description').val()==""){
-        $('#description_err').html('Please mention Description');
-        $('#description').focus();
-        returnt=false;
-      }
-      return returnt;
-    }
     function submitForm(){
-      if(validate()){
         $.blockUI
           ({ 
             css: 
@@ -107,12 +97,11 @@
               color: '#fff' 
             } 
           });
-        var url='<?php echo base_url();?>index.php?adminController/Editslider';
+        var url='<?php echo base_url();?>index.php?adminController/addingNews';
         var options = {target: '#mainContentdiv',url:url,type:'POST',data: $("#Newsinformation").serialize()}; 
         $("#Newsinformation").ajaxSubmit(options);
         setTimeout($.unblockUI, 600); 
       }
-    }
   </script>
   
     
