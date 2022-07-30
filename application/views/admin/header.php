@@ -2,7 +2,7 @@
 <div class="wrapper">
   <header class="main-header">
     <a href="<?php echo base_url();?>index.php?adminController/dashboard" class="logo">
-      <span class="logo-lg">BHUTAN TELECOM LTD</span>
+      <span class="logo-lg">MHSS</span>
     </a>
     <nav class="navbar navbar-static-top">
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">

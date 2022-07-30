@@ -7,11 +7,10 @@ class BaseController extends CI_Controller {
         parent::_construct();
     }
     public function index(){
-        //die('i am here');
-        $this->load->view('web/index');
+        $page_data['t_homeslider'] = $this->db->get('t_homeslider')->result_array();
+        $this->load->view('web/index', $page_data);
     }
     function loadpage($param1="",$param2=""){
-
 
         if($param1=="about"){
             $page_data['linktype']=$param1;
@@ -30,6 +29,10 @@ class BaseController extends CI_Controller {
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/detailnews', $page_data);   
         }
+        if($param1=="login"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/login/login', $page_data);   
+        }
 
         if($param1=="history"){
             $page_data['linktype']=$param1;
@@ -44,8 +47,8 @@ class BaseController extends CI_Controller {
                 $row = $query->row_array(); 
                 if(password_verify($this->input->post('password'), $row['Password'])){
                     if($row['Status']=="InActive"){
-                     $page_data['messagefail']='Your user detail is deactivated. Please contact system administrator.';
-                          $this->load->view('web/login',$page_data );
+                      $page_data['message'] = '<div><p style="Color:#fc1c03">Your user detail is deactivated. Please contact system administrator.</p></div>';
+                          $this->load->view('web/login/login',$page_data );
                           return FALSE; 
                     }
                     else{
@@ -54,25 +57,24 @@ class BaseController extends CI_Controller {
                         $this->session->set_userdata('Name', $row['Name']);
                         $this->session->set_userdata('Email_Id', $row['Email_Id']);
                         $this->session->set_userdata('Mobile_Number', $row['Mobile_Number']);
-                        $this->session->set_userdata('Role_Id', $row['Role_Id']);
                         redirect(base_url() . 'index.php?baseController/dashboard', 'refresh');
                     }  
                 }
                 else{
-                    $page_data['message'] = '<div class="alert alert-danger">Wrong Password! </div>';
-                    $this->load->view('web/login',$page_data );
+                    $page_data['message'] = '<div><p style="Color:#fc1c03">Wrong Password! </p></div>';
+                    $this->load->view('web/login/login',$page_data );
                     return FALSE; 
                 }
             } 
             else{
-                 $page_data['message'] = '<div class="alert alert-danger">Your email and password mismatch. please try agin or use forgot password if you are not sure with current password</div>';
-                $this->load->view('web/login',$page_data );
+                 $page_data['message'] = '<div><p style="Color:#fc1c03">Your email and password mismatch. please try agin or use forgot password if you are not sure with current password</p></div>';
+                $this->load->view('web/login/login',$page_data );
                 return FALSE;
             }
         } 
         else{
             $page_data['message'] = '';
-            $this->load->view('web/login',$page_data ); 
+            $this->load->view('web/login/login',$page_data ); 
         }
     }
 
