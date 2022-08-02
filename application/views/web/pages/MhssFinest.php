@@ -5,10 +5,10 @@
     <!-- Content -->
     <div class="page-content bg-white">
         <!-- inner page banner -->
-        <div class="page-banner ovbl-dark" style="background-image:url(assets/images/banner/banner1.jpg);">
+        <div class="page-banner ovbl-dark" style="background-image:url(<?php echo base_url();?>assest/website/assets/images/banner/banner1.jpg);">
             <div class="container">
                 <div class="page-banner-entry">
-                    <h1 class="text-white">Motithang's Finest</h1>
+                    <h1 class="text-white">MHSS Finest</h1>
 				 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@
 			<div class="container">
 				<ul class="list-inline">
 					<li><a href="#">Home</a></li>
-					<li>Portfolio</li>
+					<li>Motithang's Finest</li>
 				</ul>
 			</div>
 		</div>

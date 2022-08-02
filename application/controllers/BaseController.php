@@ -13,18 +13,21 @@ class BaseController extends CI_Controller {
     }
     function loadpage($param1="",$param2=""){
 
-        if($param1=="aboutus"){
+        if($param1=="home"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/pages/aboutus', $page_data);   
+            $this->load->view('web/index', $page_data);   
         }
-        if($param1=="contactus"){
+
+        if($param1=="Announcement"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/pages/contactus', $page_data);   
+            $this->load->view('web/pages/Announcement', $page_data);   
         }
+       
         if($param1=="NewsEvents"){
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/NewsEvents', $page_data);   
         }
+<<<<<<< HEAD
         
         if($param1=="EventDetail"){
             $page_data['linktype']=$param1;
@@ -34,19 +37,48 @@ class BaseController extends CI_Controller {
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/StaffProfile', $page_data);   
         }
+        if($param1=="result"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/result', $page_data);   
+        }
+=======
+
+>>>>>>> 242ca5d5ce70ab597a2a1dfbe0ce951745a3364e
         if($param1=="AcademicTopper"){
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/AcademicTopper', $page_data);   
         }
-        if($param1=="login"){
+
+        if($param1=="contactus"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/login/login', $page_data);   
+            $this->load->view('web/pages/contactus', $page_data);   
+        }
+       
+        if($param1=="StaffProfile"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/StaffProfile', $page_data);   
         }
 
         if($param1=="history"){
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/history', $page_data);   
         }
+
+        if($param1=="MhssFinest"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/MhssFinest', $page_data);   
+        }
+
+        if($param1=="contactus"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/contactus', $page_data);   
+        }
+        
+        if($param1=="EventDetail"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/EventDetail', $page_data);   
+        }
+        
     }
     function login(){
          $page_data['message']="";
