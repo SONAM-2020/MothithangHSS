@@ -7,7 +7,7 @@
         <div class="page-banner ovbl-dark" style="background-image:url(<?php echo base_url();?>assest/website/assets/images/banner/banner2.jpg);">
             <div class="container">
                 <div class="page-banner-entry">
-                    <h1 class="text-white">News And Events</h1>
+                    <h1 class="text-white">Announcements</h1>
 				 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
 			<div class="container">
 				<ul class="list-inline">
 					<li><a href="#">Home</a></li>
-					<li>News And Events</li>
+					<li>Announcements</li>
 				</ul>
 			</div>
 		</div>
