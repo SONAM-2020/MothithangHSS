@@ -28,7 +28,7 @@
                         data-param9="" data-param10="" 
                         data-description="Science says that Women are generally happier">
                             <!-- MAIN IMAGE -->
-                            <img src="assets/images/slider/slide1.jpg" alt="" 
+                            <img src="<?php echo base_url();?>assest/website/assets/images/slider/slide1.jpg" alt="" 
                                 data-bgposition="center center" 
                                 data-bgfit="cover" 
                                 data-bgrepeat="no-repeat" 
@@ -184,7 +184,7 @@
                         data-param9="" data-param10="" 
                         data-description="Science says that Women are generally happier">
                             <!-- MAIN IMAGE -->
-                            <img src="assets/images/slider/slide2.jpg" alt="" 
+                            <img src="<?php echo base_url();?>assest/website/assets/images/slider/slide2.jpg" alt="" 
                                 data-bgposition="center center" 
                                 data-bgfit="cover" 
                                 data-bgrepeat="no-repeat" 
@@ -335,7 +335,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="service-bx">
                                 <div class="action-box">
-                                    <img src="assets/images/our-services/pic1.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/our-services/pic1.jpg" alt="">
                                 </div>
                                 <div class="info-bx text-center">
                                     <div class="feature-box-sm radius bg-white">
@@ -349,7 +349,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-6">
                             <div class="service-bx">
                                 <div class="action-box">
-                                    <img src="assets/images/our-services/pic2.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/our-services/pic2.jpg" alt="">
                                 </div>
                                 <div class="info-bx text-center">
                                     <div class="feature-box-sm radius bg-white">
@@ -363,7 +363,7 @@
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <div class="service-bx m-b0">
                                 <div class="action-box">
-                                    <img src="assets/images/our-services/pic3.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/our-services/pic3.jpg" alt="">
                                 </div>
                                 <div class="info-bx text-center">
                                     <div class="feature-box-sm radius bg-white">
@@ -393,7 +393,7 @@
                         <div class="item">
                             <div class="cours-bx">
                                 <div class="action-box">
-                                    <img src="assets/images/courses/pic1.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/courses/pic1.jpg" alt="">
                                     <a href="#" class="btn">Read More</a>
                                 </div>
                                 <div class="info-bx text-center">
@@ -421,7 +421,7 @@
                         <div class="item">
                             <div class="cours-bx">
                                 <div class="action-box">
-                                    <img src="assets/images/courses/pic2.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/courses/pic2.jpg" alt="">
                                     <a href="#" class="btn">Read More</a>
                                 </div>
                                 <div class="info-bx text-center">
@@ -449,7 +449,7 @@
                         <div class="item">
                             <div class="cours-bx">
                                 <div class="action-box">
-                                    <img src="assets/images/courses/pic3.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/courses/pic3.jpg" alt="">
                                     <a href="#" class="btn">Read More</a>
                                 </div>
                                 <div class="info-bx text-center">
@@ -477,7 +477,7 @@
                         <div class="item">
                             <div class="cours-bx">
                                 <div class="action-box">
-                                    <img src="assets/images/courses/pic4.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/courses/pic4.jpg" alt="">
                                     <a href="#" class="btn">Read More</a>
                                 </div>
                                 <div class="info-bx text-center">
@@ -569,7 +569,7 @@
                         <div class="item">
                             <div class="event-bx">
                                 <div class="action-box">
-                                    <img src="assets/images/event/pic4.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/event/pic4.jpg" alt="">
                                 </div>
                                 <div class="info-bx d-flex">
                                     <div>
@@ -592,7 +592,7 @@
                         <div class="item">
                             <div class="event-bx">
                                 <div class="action-box">
-                                    <img src="assets/images/event/pic3.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/event/pic3.jpg" alt="">
                                 </div>
                                 <div class="info-bx d-flex">
                                     <div>
@@ -615,7 +615,7 @@
                         <div class="item">
                             <div class="event-bx">
                                 <div class="action-box">
-                                    <img src="assets/images/event/pic2.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/event/pic2.jpg" alt="">
                                 </div>
                                 <div class="info-bx d-flex">
                                     <div>
@@ -656,7 +656,7 @@
                         <div class="item">
                             <div class="testimonial-bx">
                                 <div class="testimonial-thumb">
-                                    <img src="assets/images/testimonials/pic1.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/testimonials/pic1.jpg" alt="">
                                 </div>
                                 <div class="testimonial-info">
                                     <h5 class="name">Peter Packer</h5>
@@ -670,7 +670,7 @@
                         <div class="item">
                             <div class="testimonial-bx">
                                 <div class="testimonial-thumb">
-                                    <img src="assets/images/testimonials/pic2.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/testimonials/pic2.jpg" alt="">
                                 </div>
                                 <div class="testimonial-info">
                                     <h5 class="name">Peter Packer</h5>
@@ -699,7 +699,7 @@
                         <div class="item">
                             <div class="recent-news">
                                 <div class="action-box">
-                                    <img src="assets/images/blog/latest-blog/pic1.jpg" alt="">
+                                    <img src="<?php echo base_url();?><?php echo base_url();?>assest/website/assets/images/blog/latest-blog/pic1.jpg" alt="">
                                 </div>
                                 <div class="info-bx">
                                     <ul class="media-post">
@@ -718,7 +718,7 @@
                         <div class="item">
                             <div class="recent-news">
                                 <div class="action-box">
-                                    <img src="assets/images/blog/latest-blog/pic2.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/blog/latest-blog/pic2.jpg" alt="">
                                 </div>
                                 <div class="info-bx">
                                     <ul class="media-post">
@@ -737,7 +737,7 @@
                         <div class="item">
                             <div class="recent-news">
                                 <div class="action-box">
-                                    <img src="assets/images/blog/latest-blog/pic3.jpg" alt="">
+                                    <img src="<?php echo base_url();?>assest/website/assets/images/blog/latest-blog/pic3.jpg" alt="">
                                 </div>
                                 <div class="info-bx">
                                     <ul class="media-post">
