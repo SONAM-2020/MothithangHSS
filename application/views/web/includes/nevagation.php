@@ -60,15 +60,15 @@
                     <!-- Navigation Menu ==== -->
                     <div class="menu-links navbar-collapse collapse justify-content-start" id="menuDropdown">
                         <div class="menu-logo">
-                            <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
+                            <a href="index.html"><img src="<?php echo base_url();?>assest/website/assets/images/logo.png" alt=""></a>
                         </div>
                         <ul class="nav navbar-nav"> 
-                            <li class="active"><a href="#">Home</a>
+                            <li class="active"><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/home/')">Home</a>
                             </li>
                             <li><a href="javascript:;">Announcement <i class="fa fa-chevron-down"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">News & Events</a></li>
-                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Announcement</a></li>
+                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/NewsEvents/')">News & Events</a></li>
+                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/Announcement/')">Announcements</a></li>
                                 </ul>
                             </li>
                             <li><a href="javascript:;">Non-Academic <i class="fa fa-chevron-down"></i></a>
@@ -82,19 +82,19 @@
                                 <ul class="sub-menu">
                                     <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Result</a></li>
                                     <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Downloads</a></li>
-                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Academic Topper</a></li>
+                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/AcademicTopper/')">Academic Topper</a></li>
                                     <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Academic Calender</a></li>
                                 </ul>
                             </li>
                             <li><a href="javascript:;">About Us <i class="fa fa-chevron-down"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">About Mothithang</a></li>
-                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Staff Profile</a></li>
+                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">About Motithang</a></li>
+                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/StaffProfile/')">Staff Profile</a></li>
                                     <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">History</a></li>
-                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Mothithang Finist</a></li>
+                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/MhssFinest/')">Motithang's Finest</a></li>
                                 </ul>
                             </li>
-                            <li class="active"><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Contact Us</a>
+                            <li class="active"><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/contactus/')">Contact Us</a>
                         </ul>
                         <div class="nav-social-link">
                             <a href="javascript:;"><i class="fa fa-facebook"></i></a>
