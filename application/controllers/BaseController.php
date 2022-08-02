@@ -8,13 +8,14 @@ class BaseController extends CI_Controller {
     }
     public function index(){
         $page_data['t_homeslider'] = $this->db->get('t_homeslider')->result_array();
+        $page_data['t_news'] = $this->db->get('t_news')->result_array();
         $this->load->view('web/index', $page_data);
     }
     function loadpage($param1="",$param2=""){
 
-        if($param1=="about"){
+        if($param1=="aboutus"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/pages/about', $page_data);   
+            $this->load->view('web/pages/aboutus', $page_data);   
         }
         if($param1=="contactus"){
             $page_data['linktype']=$param1;
@@ -92,6 +93,10 @@ class BaseController extends CI_Controller {
         $this->session->sess_destroy();
         $this->session->set_flashdata('logout_notification', 'logged_out');
         redirect(base_url().'index.php?baseController/', 'refresh');
+    }
+    function load_newsdetails($id=""){
+        $page_data['t_news'] = $this->db->get_where('t_news',array('Id'=>$id))->result_array();
+        $this->load->view('web/pages/detailnews', $page_data); 
     }
 
 
