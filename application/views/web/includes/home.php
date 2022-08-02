@@ -119,7 +119,7 @@
                                 <img src="<?php echo base_url();?>upload/chairperson.jpg" alt="Dasho Pema Jungney">
                             </div>
                         </div>
-                        <div class="details">
+                        <div class="home-card-details">
                             <p class = "b">DASHO PEMA JUNGNEY</p>
                         </div>
                         <div class="post ">
@@ -135,7 +135,7 @@
                             <img src="<?php echo base_url();?>upload/sonam.jpg" alt="Dasho SONAM PENJOR">
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="home-card-details">
                         <p class = "b">DASHO SONAM PENJOR</p>
                     </div>
                     <div class="post ">
@@ -151,7 +151,7 @@
                             <img src="<?php echo base_url();?>upload/jigme choden.jpg" alt="Jigme Choden">
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="home-card-details">
                         <p class = "b">JIGME CHODEN</p>
                     </div>
                     <div class="post ">
@@ -167,7 +167,7 @@
                             <img src="<?php echo base_url();?>upload/tshering zam.jpg" alt="Tshering zam">
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="home-card-details">
                         <p class = "b">MRS TSHERING ZAM</p>
                     </div>
                     <div class="post ">
@@ -183,7 +183,7 @@
                             <img src="<?php echo base_url();?>upload/Tshering zangmo.jpg" alt="Tshering Zangmo">
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="home-card-details">
                         <p class = "b">MRS TSHERING ZANGMO</p>
                     </div>
                     <div class="post b">
@@ -199,7 +199,7 @@
                             <img src="<?php echo base_url();?>upload/jambay.jpg" alt="jambay">
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="home-card-details">
                         <p class = "b">MR. JAMBAY DORJI</p>
                     </div>
                     <div class="post">
@@ -215,7 +215,7 @@
                             <img src="<?php echo base_url();?>upload/sangay.jpg" alt="Sangay">
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="home-card-details">
                         <p class = "b">LOPEN SANGAY PENJOR</p>
                     </div>
                     <div class="post">
@@ -231,7 +231,7 @@
                             <img src="<?php echo base_url();?>upload/Bishlal Biswa.jpg" alt="Bishlal">
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="home-card-details">
                         <p class = "b">MR BISHAL BISWA</p>
                     </div>
                     <div class="post">
@@ -247,7 +247,7 @@
                             <img src="<?php echo base_url();?>upload/sippy parjule.jpg" alt="Sippy Parjuli">
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="home-card-details">
                         <p class = "b">MRS. SIPPY PARJULI</p>
                     </div>
                     <div class="post">
@@ -263,7 +263,7 @@
                             <img src="" alt="Dawa Tshering">
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="home-card-details">
                         <p class = "b">MR. DAWA TSHERING</p>
                     </div>
                     <div class="post">
@@ -279,7 +279,7 @@
                             <img src="<?php echo base_url();?>upload/sc.jpg" alt="Sonam Choden">
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="home-card-details">
                         <p class = "b">MRS. SONAM CHODEN</p>
                     </div>
                     <div class="post">
