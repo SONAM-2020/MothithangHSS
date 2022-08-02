@@ -755,9 +755,5 @@
                     </div>
                 </div>
             </div>
-            <!-- Recent News End -->
-            
         </div>
-        <!-- contact area END -->
     </div>
-

@@ -102,9 +102,7 @@
                             <a href="javascript:;"><i class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
-                    <!-- Navigation Menu END ==== -->
                 </div>
             </div>
         </div>
     </header>
-    <!-- Header Top END ==== -->
