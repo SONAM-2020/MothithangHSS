@@ -80,7 +80,7 @@
                             </li>
                             <li><a href="javascript:;">Academic <i class="fa fa-chevron-down"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Result</a></li>
+                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/result/')">Result</a></li>
                                     <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Downloads</a></li>
                                     <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Academic Topper</a></li>
                                     <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Academic Calender</a></li>

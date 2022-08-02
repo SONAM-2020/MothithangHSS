@@ -34,6 +34,10 @@ class BaseController extends CI_Controller {
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/StaffProfile', $page_data);   
         }
+        if($param1=="result"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/result', $page_data);   
+        }
         if($param1=="AcademicTopper"){
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/AcademicTopper', $page_data);   
