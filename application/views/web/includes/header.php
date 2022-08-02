@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" href="<?php echo base_url();?>assest/website/assets/images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url();?>assest/website/assets/images/favicon.png" />
-    <title>EduChamp : Education HTML Template </title>
+    <title>MOTHITHANG HIGHER SECONDARY SCHOOL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assest/website/assets/css/assets.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assest/website/assets/css/typography.css">

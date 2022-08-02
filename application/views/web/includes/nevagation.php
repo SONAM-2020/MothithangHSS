@@ -11,14 +11,7 @@
                     </div>
                     <div class="topbar-right">
                         <ul>
-                            <li>
-                                <select class="header-lang-bx">
-                                    <option data-icon="flag flag-uk">English UK</option>
-                                    <option data-icon="flag flag-us">English US</option>
-                                </select>
-                            </li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="register.html">Register</a></li>
+                            <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/login/')">Administrator Login</a></li>
                         </ul>
                     </div>
                 </div>
@@ -80,7 +73,7 @@
                             </li>
                             <li><a href="javascript:;">Academic <i class="fa fa-chevron-down"></i></a>
                                 <ul class="sub-menu">
-                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Result</a></li>
+                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/result/')">Result</a></li>
                                     <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Downloads</a></li>
                                     <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/AcademicTopper/')">Academic Topper</a></li>
                                     <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/aboutus/')">Academic Calender</a></li>

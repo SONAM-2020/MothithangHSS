@@ -20,14 +20,20 @@ class AdminController extends CI_Controller {
             'Id' => $param2))->row();
             $this->load->view('admin/pages/editslider', $page_data);
         }
-       
          if($param1=="newslist"){
             $page_data['t_news'] = $this->db->get('t_news')->result_array();
             $this->load->view('admin/pages/newslist', $page_data);
         }
-
-         if($param1=="addnews"){
+        if($param1=="addnews"){
             $this->load->view('admin/pages/addnews', $page_data);
+        }
+        if($param1=="rules"){
+            $page_data['t_files'] = $this->db->get('t_files')->result_array();
+            $this->load->view('admin/pages/rules', $page_data);
+        }
+        if($param1=="topper"){
+            $page_data['t_academic_topper'] = $this->db->get('t_academic_topper')->result_array();
+            $this->load->view('admin/pages/topper', $page_data);
         }
         if($param1=="editnews"){
             $page_data['t_news'] = $this->db->get_where('t_news', array(
@@ -64,6 +70,40 @@ class AdminController extends CI_Controller {
         }
         $this->load->view('admin/pages/systemusers', $page_data); 
     }
+    
+    function Uploadfiles(){
+        $data['Name']=$this->input->post('Name');
+        $data['Type']=$this->input->post('type');
+        $data['Status']='Active';
+        if(!empty($_FILES["Image"]["name"])){
+            move_uploaded_file($_FILES['Image']['tmp_name'],'./uploads/Files/'.$_FILES["Image"]["name"]);
+            $data['image']=$_FILES["Image"]["name"];
+        }
+         $this->CommonModel->do_insert('t_files', $data);
+         $page_data['t_files'] = $this->db->get('t_files')->result_array();
+         if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>Files has been uploaded successfully</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to upload files. Please Try Again!";
+        }
+        $this->load->view('admin/pages/rules', $page_data); 
+
+    }
+    function Deletefiles($productid="",$page=""){ 
+        $page_data['message']="";
+        $page_data['messagefail']="";
+        $this->db->where('Id', $productid);
+        $this->db->delete('t_files');
+        if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>files has been deleted successfully</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete files. Please Try Again!";
+        }
+        $page_data['t_files'] = $this->db->get('t_files')->result_array();
+        $this->load->view('admin/pages/rules', $page_data); 
+        }
 
     function EditSystemUsers(){
         $data['Name']=$this->input->post('Name1');
@@ -155,6 +195,50 @@ class AdminController extends CI_Controller {
         $page_data['t_slider'] = $this->db->get('t_homeslider')->result_array();
         $this->load->view('admin/pages/homeslider', $page_data); 
         }
+        
+        function deletingtopper($productid="",$page=""){ 
+        $page_data['message']="";
+        $page_data['messagefail']="";
+        $this->db->where('Id', $productid);
+        $this->db->delete('t_academic_topper');
+        if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>Topper has been deleted successfully</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete Topper. Please Try Again!";
+        }
+        $page_data['t_academic_topper'] = $this->db->get('t_academic_topper')->result_array();
+        $this->load->view('admin/pages/topper', $page_data); 
+        }
+        
+        function addingtopper(){
+        $data['Name']=$this->input->post('Name');
+        $data['Percentage']=$this->input->post('Percentage');
+        $data['Type']=$this->input->post('type');
+        $data['Class']=$this->input->post('Class');
+        $data['Year']=$this->input->post('Year');
+        $data['Status']='Active';
+        $data['Date']=date('Y-m-d');
+        $new_file_name = $_FILES["Image"]["name"];
+        $file_directory = "uploads/topper/";
+        if(!is_dir($file_directory)){
+            mkdir($file_directory,0777,TRUE);
+        }
+        if($new_file_name!=""){
+          move_uploaded_file($_FILES["Image"]["tmp_name"], $file_directory . $new_file_name);
+          $data['image']=$file_directory . $new_file_name;
+        }
+         
+        $this->CommonModel->do_insert('t_academic_topper', $data);
+         $page_data['t_academic_topper'] = $this->db->get('t_academic_topper')->result_array();
+         if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>Topper has been successfully Created</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create Topper. Please Try Again!";
+        }
+        $this->load->view('admin/pages/topper', $page_data); 
+    }
 
 function addingNews(){
         $data['Name']=$this->input->post('Name');

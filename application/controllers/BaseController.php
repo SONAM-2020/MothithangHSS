@@ -27,7 +27,23 @@ class BaseController extends CI_Controller {
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/NewsEvents', $page_data);   
         }
+<<<<<<< HEAD
+        
+        if($param1=="EventDetail"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/EventDetail', $page_data);   
+        }
+        if($param1=="StaffProfile"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/StaffProfile', $page_data);   
+        }
+        if($param1=="result"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/result', $page_data);   
+        }
+=======
 
+>>>>>>> 242ca5d5ce70ab597a2a1dfbe0ce951745a3364e
         if($param1=="AcademicTopper"){
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/AcademicTopper', $page_data);   
