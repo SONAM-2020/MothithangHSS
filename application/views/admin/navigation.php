@@ -34,42 +34,37 @@
           </ul>
         </li>
         <li class="treeview">
+          <a href="#" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/rules/')"><i class="fa fa-laptop"></i>
+            <span>Non-Academic Mgnt.</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
           <a href="#">
              <i class="fa fa-laptop"></i>
-            <span>Product Management</span>
+            <span>Academic Management</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/featuredproduct/')">Featured Product</a></li>
+            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/topper/')"><i class="fa fa-circle-o"></i>Academic Topper</a></li>
+            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/offer/')"><i class="fa fa-circle-o"></i>Academic Calender</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
              <i class="fa fa-laptop"></i>
-            <span>Offer Management</span>
+            <span>School Management</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/offer/')"><i class="fa fa-circle-o"></i>Offers</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-             <i class="fa fa-laptop"></i>
-            <span>Service Management</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/Birth_History/')">i class="fa fa-circle-o"></i>འཁྲུངས་རབས།</a></li>
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/Successive_Reincarnations/')">སྐུ་ཕྲེང་རིམ་བྱོན།</a></li>
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/Intro_Rinpoche/')">སྐྱབས་རྗེ་རིན་པོ་ཆེའི་ངོ་སྤྲོད།</a></li>
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/Activities/')">མཛད་རྣམ།</a></li>
+          <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/offer/')"><i class="fa fa-circle-o"></i>History</a></li>
+            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/offer/')"><i class="fa fa-circle-o"></i>Staff Management</a></li>
+            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/offer/')"><i class="fa fa-circle-o"></i>Motithang Finest</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -82,7 +77,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="#"class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/userprofile/<?php echo $this->session->userdata('userId');?>')">
+          <a href="#"class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/userprofile/<?php echo $this->session->userdata('User_Id');?>')">
             <i class="fa fa-laptop"></i>
             <span>My Account</span>
             <span class="pull-right-container">
