@@ -5,7 +5,7 @@
  <!-- Content -->
  <div class="page-content bg-white">
         <!-- inner page banner -->
-        <div class="page-banner ovbl-dark" style="background-image:url(assets/images/banner/banner1.jpg);">
+        <div class="page-banner ovbl-dark" style="background-image:url(<?php echo base_url();?>assest/website/assets/images/banner/banner1.jpg);">
             <div class="container">
                 <div class="page-banner-entry">
                     <h1 class="text-white">Staff Profile</h1>
@@ -31,7 +31,7 @@
 						<div class="col-lg-3 col-md-4 col-sm-12 m-b30">
 							<div class="profile-bx text-center">
 								<div class="user-profile-thumb">
-									<img src="assets/images/profile/pic1.jpg" alt=""/>
+									<img src="<?php echo base_url();?>assest/website/assets/images/profile/pic1.jpg" alt=""/>
 								</div>
 								<div class="profile-info">
 									<h4>Mark Andre</h4>
@@ -92,7 +92,7 @@
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="assets/images/courses/pic1.jpg" alt="">
+																<img src="<?php echo base_url();?>assest/website/assets/images/courses/pic1.jpg" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">
@@ -120,7 +120,7 @@
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 pending">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="assets/images/courses/pic2.jpg" alt="">
+																<img src="<?php echo base_url();?>assest/website/assets/images/courses/pic2.jpg" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">
@@ -148,7 +148,7 @@
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="assets/images/courses/pic3.jpg" alt="">
+																<img src="<?php echo base_url();?>assest/website/assets/images/courses/pic3.jpg" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">
@@ -176,7 +176,7 @@
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 pending">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="assets/images/courses/pic4.jpg" alt="">
+																<img src="<?php echo base_url();?>assest/website/assets/images/courses/pic4.jpg" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">
@@ -204,7 +204,7 @@
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="assets/images/courses/pic5.jpg" alt="">
+																<img src="<?php echo base_url();?>assest/website/assets/images/courses/pic5.jpg" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">
@@ -232,7 +232,7 @@
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 pending">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="assets/images/courses/pic6.jpg" alt="">
+																<img src="<?php echo base_url();?>assest/website/assets/images/courses/pic6.jpg" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">
@@ -260,7 +260,7 @@
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="assets/images/courses/pic7.jpg" alt="">
+																<img src="<?php echo base_url();?>assest/website/assets/images/courses/pic7.jpg" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">
@@ -288,7 +288,7 @@
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 book">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="assets/images/courses/pic8.jpg" alt="">
+																<img src="<?php echo base_url();?>assest/website/assets/images/courses/pic8.jpg" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">
@@ -316,7 +316,7 @@
 													<li class="action-card col-xl-4 col-lg-6 col-md-12 col-sm-6 publish">
 														<div class="cours-bx">
 															<div class="action-box">
-																<img src="assets/images/courses/pic9.jpg" alt="">
+																<img src="<?php echo base_url();?>assest/website/assets/images/courses/pic9.jpg" alt="">
 																<a href="#" class="btn">Read More</a>
 															</div>
 															<div class="info-bx text-center">

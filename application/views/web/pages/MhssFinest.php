@@ -8,7 +8,7 @@
         <div class="page-banner ovbl-dark" style="background-image:url(assets/images/banner/banner1.jpg);">
             <div class="container">
                 <div class="page-banner-entry">
-                    <h1 class="text-white">Academic Toppers</h1>
+                    <h1 class="text-white">Motithang's Finest</h1>
 				 </div>
             </div>
         </div>
@@ -31,37 +31,12 @@
 						<ul class="filters" data-toggle="buttons">
 							<li data-filter="" class="btn active">
 								<input type="radio">
-								<a href="#"><span>Class 9</span></a> 
+								<a href="#"><span>BCSE</span></a> 
 							</li>
 							<li data-filter="book" class="btn">
 								<input type="radio">
-								<a href="#"><span>Class 10</span></a> 
+								<a href="#"><span>BHSEA</span></a> 
 							</li>
-							<li data-filter="courses" class="btn">
-								<input type="radio">
-								<a href="#"><span>11 Arts</span></a> 
-							</li>
-							<li data-filter="courses" class="btn">
-								<input type="radio">
-								<a href="#"><span>11 Commerce</span></a> 
-							</li>
-							<li data-filter="courses" class="btn">
-								<input type="radio">
-								<a href="#"><span>11 Science</span></a> 
-							</li>
-							<li data-filter="courses" class="btn">
-								<input type="radio">
-								<a href="#"><span>12 Arts</span></a> 
-							</li>
-							<li data-filter="courses" class="btn">
-								<input type="radio">
-								<a href="#"><span>12 Commerce</span></a> 
-							</li>
-							<li data-filter="courses" class="btn">
-								<input type="radio">
-								<a href="#"><span>12 Science</span></a> 
-							</li>
-						
 						</ul>
 					</div>
 					<div class="clearfix">
@@ -230,7 +205,7 @@
 								<div class="ttr-box portfolio-bx">
 									<div class="ttr-media media-ov2 media-effect">
 										<a href="javascript:void(0);">
-											<img src="assest/website/assets/images/portfolio/image_9.jpg" alt=""> 
+											<img src="<?php echo base_url();?>assest/website/assets/images/portfolio/image_9.jpg" alt=""> 
 										</a>
 										<div class="ov-box">
 											<div class="overlay-icon align-m"> 
@@ -250,7 +225,7 @@
 								<div class="ttr-box portfolio-bx">
 									<div class="ttr-media media-ov2 media-effect">
 										<a href="javascript:void(0);">
-											<img src="assest/website/assets/images/portfolio/image_10.jpg" alt=""> 
+											<img src="<?php echo base_url();?>assest/website/assets/images/portfolio/image_10.jpg" alt=""> 
 										</a>
 										<div class="ov-box">
 											<div class="overlay-icon align-m"> 
