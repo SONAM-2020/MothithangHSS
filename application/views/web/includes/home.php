@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- Content -->
     <div class="page-content bg-white">
         <!-- Main Slider -->
@@ -79,48 +78,6 @@
                                 style="z-index: 6; font-family:rubik; font-weight:700; text-align:center; white-space: normal;">
                                     Welcome To University
                             </div>
-=======
-<div class="home-content">
-        <div class="slider-container">
-            <input type="radio" checked = true class = "1" name = "home-slider-btn" id = "home-slide1">
-            <div class="slider-nav">
-                <label for="home-slide1" class = "slider-btn"></label>
-            </div>
-            <div class="auto-slidenav">
-                <div class="auto-slide1"></div>
-            </div>
-            <?php foreach($t_homeslider as $i=> $event): ?>
-            <div class="slider first-slide">
-                <img src="<?php echo base_url();?>uploads/slider/<?php echo$event['Image'];?>"></" alt="">
-                <div class="slider-content">
-                    <h1><?php echo $event['Name'];?></h1>
-                    <p class = "home-center"><?php echo $event['Desicription'];?></p>
-                    <a href= "<?php echo $event['URL'];?>" class = "home-center"><button>Learn More</button></a>
-                </div>
-            </div>
-            <?php endforeach;?>              
-            
-        </div>
-        <div class="mi-vi">
-        <div class="mivi-container">
-            <div class="mivi-slider">
-            <input type="radio" name = "mivi-slider-btn" class = "misson-btn" checked = true id = "mission">
-            <input type="radio" name = "mivi-slider-btn" class = "vision-btn" id = "vision">
-            <div class="home-mission">
-                <h1>MISSION</h1>
-                <p>Cultivate a conductive and nurturing learning environment
-                     that enhances academic excellence, and produces nationally rooted, globally competent 
-                     individuals, governed by the principles of Gross National Happiness. </p>
-                    </div>
-            <div class="home-vision">
-                <h1>VISION</h1>
-                <p>To be a model institution of learning based 
-                    on the values of ‘<i>Tha Damtse</i>’ and ‘<i>Ley-Jum-Drey </i>’, guided 
-                    by the principles of Gross National Happiness.</p>
-                </div>
-            </div>
-        </div>
->>>>>>> b2abd1117968369953ff8af337bef53bd8ce83af
 
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption Newspaper-Subtitle   tp-resizeme" 
@@ -804,65 +761,4 @@
         </div>
         <!-- contact area END -->
     </div>
-<<<<<<< HEAD
     <!-- Content END--> 
-=======
-</div>
-<script>
-    var slider_counter
-var timer_motto = 0;
-var staff_margin = 0
-var staff_counter = 0
-setInterval(function () {
-    var radios = document.getElementsByName("home-slider-btn")
-    for (var radio of radios) {
-        if (radio.checked) {
-            var slider_counter = parseInt(radio.classList[0])
-            if (slider_counter != 4) {
-                slider_counter += 1
-                document.getElementById("home-slide" + slider_counter).checked = true
-            }
-            else {
-                document.getElementById("home-slide1").checked = true
-            }
-            break
-        }
-    }
-}, 7000)
-
-setInterval(function () {
-    var mivi = document.getElementsByName("mivi-slider-btn")
-    for (var radio of mivi) {
-        if (radio.checked) {
-            var active = radio.classList[0]
-            if (active != "vision-btn") {
-                document.getElementById("vision").checked = true
-                break
-            }
-            else {
-                document.getElementById("mission").checked = true
-                break
-            }
-        }
-
-    }
-}, 10000)
-
-setInterval(function () {
-    var card = document.getElementById("firstcard")
-    staff_counter += 1
-    if (staff_counter < 11) {
-        document.getElementById("slidebutton" + staff_counter).checked = true
-    }
-    else {
-        staff_counter = 0
-        document.getElementById("slidebutton" + staff_counter).checked = true
-
-    }
-}, 3000)
-
-
-</script>
-
-<SCript src="<?php echo base_url();?>assest/website/home.js"></SCript>
->>>>>>> b2abd1117968369953ff8af337bef53bd8ce83af

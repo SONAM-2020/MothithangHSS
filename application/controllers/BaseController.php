@@ -21,14 +21,22 @@ class BaseController extends CI_Controller {
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/contactus', $page_data);   
         }
-        if($param1=="countrytopper"){
+        if($param1=="NewsEvents"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/pages/countrytopper', $page_data);   
+            $this->load->view('web/pages/NewsEvents', $page_data);   
         }
-
-        if($param1=="detailnews"){
+        
+        if($param1=="EventDetail"){
             $page_data['linktype']=$param1;
-            $this->load->view('web/pages/detailnews', $page_data);   
+            $this->load->view('web/pages/EventDetail', $page_data);   
+        }
+        if($param1=="StaffProfile"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/StaffProfile', $page_data);   
+        }
+        if($param1=="AcademicTopper"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/pages/AcademicTopper', $page_data);   
         }
         if($param1=="login"){
             $page_data['linktype']=$param1;

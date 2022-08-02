@@ -79,8 +79,8 @@
                                     </li>
                                     <li><a href="javascript:;">Event<i class="fa fa-angle-right"></i></a>
                                         <ul class="sub-menu">
-                                            <li><a href="event.html">Event</a></li>
-                                            <li><a href="events-details.html">Events Details</a></li>
+                                            <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/NewsEvents/')">Event</a></li>
+                                            <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/EventDetail/')">Events Details</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="javascript:;">FAQ's<i class="fa fa-angle-right"></i></a>
@@ -94,8 +94,8 @@
                                             <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/contactus/')" >Contact Us 1</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li><a href="profile.html">Profile</a></li>
+                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/AcademicTopper/')">Portfolio</a></li>
+                                    <li><a href="#" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/StaffProfile/')">Profile</a></li>
                                     <li><a href="membership.html">Membership</a></li>
                                     <li><a href="error-404.html">404 Page</a></li>
                                 </ul>
