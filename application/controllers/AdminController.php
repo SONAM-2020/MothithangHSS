@@ -10,7 +10,7 @@ class AdminController extends CI_Controller {
         if($param1=="AddUsers"){
             $page_data['t_user'] = $this->db->get('t_user')->result_array();
             $this->load->view('admin/pages/systemusers', $page_data);
-        }
+        } 
          if($param1=="Addslider"){
             $page_data['t_slider'] = $this->db->get('t_homeslider')->result_array();
             $this->load->view('admin/pages/homeslider', $page_data);
@@ -40,7 +40,18 @@ class AdminController extends CI_Controller {
             'Id' => $param2))->row();
             $this->load->view('admin/pages/editnews', $page_data);
         }
-        
+        if($param1=="calender"){
+         $page_data['t_calender'] = $this->db->get('t_calender')->result_array();
+            $this->load->view('admin/pages/calender', $page_data);
+        }
+        if($param1=="aboutschool"){
+        $page_data['t_aboutus'] = $this->db->get('t_aboutus')->row();
+            $this->load->view('admin/pages/aboutschool', $page_data);
+        }
+        if($param1=="staff"){
+         $page_data['t_staff'] = $this->db->get('t_staff')->result_array();
+            $this->load->view('admin/pages/staff', $page_data);
+        }
     }
 
     function loadsliderdetails($id=""){
@@ -238,6 +249,56 @@ class AdminController extends CI_Controller {
             $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create Topper. Please Try Again!";
         }
         $this->load->view('admin/pages/topper', $page_data); 
+    }
+    
+    function addingevents(){
+        $data['Name']=$this->input->post('Name');
+        $data['Date']=$this->input->post('date');
+        $data['Status']='Active';
+        $this->CommonModel->do_insert('t_calender', $data);
+         $page_data['t_calender'] = $this->db->get('t_calender')->result_array();
+         if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>Academic Event has been successfully Created</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create Academic Event. Please Try Again!";
+        }
+        $this->load->view('admin/pages/calender', $page_data); 
+    }
+    function deletingevents($productid="",$page=""){ 
+        $page_data['message']="";
+        $page_data['messagefail']="";
+        $this->db->where('Id', $productid);
+        $this->db->delete('t_calender');
+        if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>Academic Event has been deleted successfully</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete Academic Event. Please Try Again!";
+        }
+        $page_data['t_calender'] = $this->db->get('t_calender')->result_array();
+        $this->load->view('admin/pages/calender', $page_data); 
+        }
+ 
+ function addingabout(){
+        $data['Name']=$this->input->post('Name1');
+        $data['History']=$this->input->post('History1');
+        $data['Mission']=$this->input->post('Mission1');
+        $data['Vision']=$this->input->post('Vision1');
+        $data['Motto']=$this->input->post('Motto1');
+
+        $this->db->where('Id', $this->input->post('updateId'));
+            $this->db->update('t_aboutus', $data);
+
+         
+         if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>About School has been successfully Created</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create School Infromation. Please Try Again!";
+        }
+        $page_data['t_aboutus'] = $this->db->get('t_aboutus')->row();
+        $this->load->view('admin/pages/aboutschool', $page_data); 
     }
 
 function addingNews(){
