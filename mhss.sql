@@ -1,6 +1,10 @@
 /*
 SQLyog Trial v13.1.8 (64 bit)
+<<<<<<< HEAD
 MySQL - 8.0.28 : Database - mhss
+=======
+MySQL - 8.0.29 : Database - mhss
+>>>>>>> 6afd6e90bad9d07f56a5c32be3e3f82746a3c825
 *********************************************************************
 */
 
@@ -144,12 +148,26 @@ CREATE TABLE `t_department_type` (
   `Name` varchar(255) DEFAULT NULL,
   `Status` enum('Active','InActive') DEFAULT 'Active',
   PRIMARY KEY (`Id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+>>>>>>> 6afd6e90bad9d07f56a5c32be3e3f82746a3c825
 
 /*Data for the table `t_department_type` */
 
 insert  into `t_department_type`(`Id`,`Name`,`Status`) values 
+<<<<<<< HEAD
 (1,NULL,'Active');
+=======
+(1,'School Management board','Active'),
+(2,'Dzongkha Department','Active'),
+(3,'English Department','Active'),
+(4,'Mathematics/IT department','Active'),
+(5,'Science Department','Active'),
+(6,'Commerce/Economics/Accountancy Department','Active'),
+(7,'Humanities & Others\' Department','Active');
+>>>>>>> 6afd6e90bad9d07f56a5c32be3e3f82746a3c825
 
 /*Table structure for table `t_files` */
 
@@ -231,11 +249,16 @@ CREATE TABLE `t_post_type` (
   `Name` varchar(255) DEFAULT NULL,
   `Status` enum('Active','InActive') DEFAULT 'Active',
   PRIMARY KEY (`Id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+>>>>>>> 6afd6e90bad9d07f56a5c32be3e3f82746a3c825
 
 /*Data for the table `t_post_type` */
 
 insert  into `t_post_type`(`Id`,`Name`,`Status`) values 
+<<<<<<< HEAD
 (1,'HoD','Active'),
 (2,'Principal','Active'),
 (3,'Academic head','Active'),
@@ -255,6 +278,9 @@ insert  into `t_post_type`(`Id`,`Name`,`Status`) values
 (17,'Driver','Active'),
 (18,'Sweeper','Active'),
 (19,'Night Guard','Active');
+=======
+(1,'HoD','Active');
+>>>>>>> 6afd6e90bad9d07f56a5c32be3e3f82746a3c825
 
 /*Table structure for table `t_principals` */
 
@@ -332,11 +358,19 @@ DROP TABLE IF EXISTS `t_user`;
 
 CREATE TABLE `t_user` (
   `Id` int NOT NULL AUTO_INCREMENT,
+<<<<<<< HEAD
   `Email_Id` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `Password` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `Mobile_Number` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `Name` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `Status` enum('Active','InActive') CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT 'Active',
+=======
+  `Email_Id` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Password` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Mobile_Number` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Name` varchar(200) CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `Status` enum('Active','InActive') CHARACTER SET utf8mb3 COLLATE utf8_unicode_ci DEFAULT 'Active',
+>>>>>>> 6afd6e90bad9d07f56a5c32be3e3f82746a3c825
   `Image` tinyblob,
   `Created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`Id`)
