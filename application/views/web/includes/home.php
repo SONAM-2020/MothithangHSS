@@ -637,7 +637,7 @@
                     </div>
                     </div>
                     <div class="text-center">
-                        <a href="#" class="btn">View All Event</a>
+                        <a href="#" class="btn" onclick="loadpage('<?php echo base_url();?>index.php?baseController/loadpage/NewsEvents/')">View All Event</a>
                     </div>
                 </div>
             </div>
