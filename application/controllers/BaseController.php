@@ -27,6 +27,10 @@ class BaseController extends CI_Controller {
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/NewsEvents', $page_data);   
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> b83369de34bedf0a2165ca03736c51e912cdbcdc
         if($param1=="AcademicTopper"){
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/AcademicTopper', $page_data);   
@@ -60,6 +64,10 @@ class BaseController extends CI_Controller {
         if($param1=="EventDetail"){
             $page_data['linktype']=$param1;
             $this->load->view('web/pages/EventDetail', $page_data);   
+        }
+        if($param1=="login"){
+            $page_data['linktype']=$param1;
+            $this->load->view('web/login/login', $page_data);   
         }
         
     }

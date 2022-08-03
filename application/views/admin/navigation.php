@@ -15,7 +15,7 @@
           <a href="#"class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/AddUsers/')">
             <i class="fa fa-laptop"></i>
             <span>User Management</span>
-            <span class="pull-right-container">
+            <span class="pull-right-container"> 
               <span class="label label-primary pull-right"></span>
             </span>
           </a>
@@ -50,7 +50,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/topper/')"><i class="fa fa-circle-o"></i>Academic Topper</a></li>
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/offer/')"><i class="fa fa-circle-o"></i>Academic Calender</a></li>
+            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/calender/')"><i class="fa fa-circle-o"></i>Academic Calender</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -62,24 +62,14 @@
             </span>
           </a>
           <ul class="treeview-menu">
-          <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/offer/')"><i class="fa fa-circle-o"></i>History</a></li>
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/offer/')"><i class="fa fa-circle-o"></i>Staff Management</a></li>
-            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/offer/')"><i class="fa fa-circle-o"></i>Motithang Finest</a></li>
+          <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/aboutschool/')"><i class="fa fa-circle-o"></i>About School</a></li>
+            <li><a href="#" class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/staff/')"><i class="fa fa-circle-o"></i>Staff Management</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#"class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/Guidelines/')">
             <i class="fa fa-laptop"></i>
             <span>Application Guidelines</span>
-            <span class="pull-right-container">
-              <span class="label label-primary pull-right"></span>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#"class="nav-link" onclick="loadpage('<?php echo base_url();?>index.php?adminController/loadpage/userprofile/<?php echo $this->session->userdata('User_Id');?>')">
-            <i class="fa fa-laptop"></i>
-            <span>My Account</span>
             <span class="pull-right-container">
               <span class="label label-primary pull-right"></span>
             </span>
