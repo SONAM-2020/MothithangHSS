@@ -3,30 +3,84 @@
   error_reporting(0);
 ?>
 <!DOCTYPE html>
-<html lang="en" >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Motithang Higher Secondary School</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="<?php echo base_url();?>assest/website/style.css">
-</head>
-<style type="text/css">
-  .button1 {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
   }
+  .cancelbtn {
+     width: 100%;
+  }
+}
 </style>
-<body id="mainpublicContent">
-<div id="login-form-wrap">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-la-12">
-    <div class="row">
-    <div class="col-xs-2 col-sm-2 col-md-2 col-la-2"></div>
-    <div class="col-xs-8 col-sm-8 col-md-8 col-la-8">
-      <h3> Administrator Login</h3>
-    <?php echo form_open('?baseController/login' , array('class' =>'form-horizontal','id' => 'login-form'));?>
+</head>
+<body>
+
+<h2>Administrator Login</h2>
+
+<?php echo form_open('?baseController/login' , array('class' =>'form-horizontal','id' => 'login-form'));?>
+  <!-- <div class="imgcontainer">
+    <img src="<?php echo base_url();?>/uploads/user1-128x128.jpg" alt="Avatar" class="avatar" >
+  </div> -->
+
+  <div class="container">
+
     <?php if($message!=''){?>
       <div class="form-group has-feedback" id="mismatcherr" >
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -35,21 +89,25 @@
       </div>
     <?php }?>
     <span id="messagetodisplay"></span>
-    <label>Email Address</label>
-    <input type="email" name="email" onclick="remove_err('email_err')" id="email">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" name="email" onclick="remove_err('email_err')" id="email" placeholder="Enter Username" >
     <span id="email_err" class="text-danger"></span>
-    <label>Password</label>
-    <input type="password" id="password" onclick="remove_err('password_err')" name="password" >
-    <span id="password_err" class="text-danger"></span>
-    <br>
-    <button class="button1" onclick="login()">Login</button>
-    <br><br><br>
-  </form>
-</div>
-</div>
-</div>
-</div>
 
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="password" onclick="remove_err('password_err')" name="password" placeholder="Enter Password">
+    <span id="password_err" class="text-danger"></span>
+        
+    <button  onclick="login()">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
 
 <script>
 function login(){
@@ -110,5 +168,6 @@ function removevalidationhceckbox(errid,id){
       setTimeout($.unblockUI, 1000); 
     }
 </script>
+
 </body>
 </html>

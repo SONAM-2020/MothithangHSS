@@ -42,12 +42,12 @@
               <th>Year</th>
               <th>Department</th>
               <th>Qualification</th>
-              <th>Email</th>
+              <!-- <th>Email</th> -->
               <th>Phone</th>
               <th>Post</th>
               <th>Serving Tenure</th>
-              <th>Image</th>
-              <th>Action</th>
+              <!-- <th>Image</th>
+ -->              <th>Action</th>
             </tr>
             </thead>
             <tbody>
@@ -58,11 +58,11 @@
               <td><?php echo $event['Year'];?></td>
               <td><?php echo $event['Department'];?></td>
               <td><?php echo $event['Qualification'];?></td>
-              <td><?php echo $event['Email'];?></td>
+              <!-- <td><?php echo $event['Email'];?></td> -->
                <td><?php echo $event['Phone'];?></td>
               <td><?php echo $event['Post'];?></td>
               <td><?php echo $event['Serving_tenure'];?></td>
-              <td><img style="width: 100px; height: 100px;" src="<?php echo base_url();?><?php echo $event['image'];?>"></td>
+              <!-- <td><img style="width: 100px; height: 100px;" src="<?php echo base_url();?><?php echo $event['image'];?>"></td> -->
               <td> 
                  <button type="button" class="btn btn-block btn-danger"  onclick="deleteuser('<?php echo $event['Id']?>')" ><i class="fa fa-edit"></i>Delete</button> 
               </td>
@@ -107,15 +107,13 @@
                           <label>Department:<span class="text-danger">*</span></label>
                           <select id="department" class="form-control" name="department">
                             <option value="">Select Department</option>
-                            <option value="School Management Board">School Management Board</option>
-                            <option value="Dzongkha Department">Dzongkha Department</option>
-                            <option value="English Department">English Department</option>
-                            <option value="Mathematics/IT Department">Mathematics/IT Department</option>
-                            <option value="Science Department">Science Department</option>
-                            <option value="Commerce/Economics/Accountancy Department">Commerce/Economics/Accountancy Department</option>
-                            <option value="Humanities & Others' Department">Humanities & Others' Department</option>
-                            <option value="Supporting Staff">Supporting Staff</option>
-                            <option value="Principals">Principals</option>
+                              <?php  
+                                foreach($t_department as $i=> $hhc):
+                              ?>
+                                <option value="<?=$hhc['Name'];?>"> <?=$hhc['Name'];?></option>
+                              <?php 
+                                endforeach; 
+                              ?>
                           </select>
                         </div>
                       </div>
@@ -125,13 +123,34 @@
                             <input type="text" id="qualification" name="qualification" class="form-control">
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                          <label>Topper Type:<span class="text-danger">*</span></label>
-                          <select id="type" class="form-control" name="type">
-                            <option value="">Select Topper Type</option>
-                            <option value="BCSE">BCSE</option>
-                            <option value="BHSEC">BHSEC</option>
-                            <option value="Academic Topper">Academic Topper</option>
+                          <label>Email:<span class="text-danger">*</span></label>
+                            <input type="text" id="email" name="email" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <label>Phone:<span class="text-danger">*</span></label>
+                            <input type="text" id="phone" name="phone" class="form-control">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <label>Post:<span class="text-danger">*</span></label>
+                            <select id="post" class="form-control" name="post">
+                            <option value="">Select Post</option>
+                             <?php  
+                                foreach($t_post as $i=> $hhc):
+                              ?>
+                                <option value="<?=$hhc['Name'];?>"> <?=$hhc['Name'];?></option>
+                              <?php 
+                                endforeach; 
+                              ?>
                           </select>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <label>Serving Tenure:<span class="text-danger">*</span></label>
+                            <input type="text" id="serving" name="serving" class="form-control">
+                        </div>
                         </div>
                       </div>
                   </div>
@@ -154,11 +173,11 @@
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
+      'lengthChange': true,
+      'searching'   : true,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : false
+      'autoWidth'   : true
     })
   })
  function addinfo(){

@@ -60,7 +60,7 @@
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-          <a href="<?php echo base_url();?>index.php?loginController/logout"> <button type="button"  class="btn btn-primary">Yes</button></a>
+          <a href="<?php echo base_url();?>index.php?adminController/logout"> <button type="button"  class="btn btn-primary">Yes</button></a>
             </div>
           </div>
         </div>
