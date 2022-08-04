@@ -8,7 +8,10 @@ class BaseController extends CI_Controller {
     }
     public function index(){
         $page_data['t_homeslider'] = $this->db->get('t_homeslider')->result_array();
-        $page_data['t_news'] = $this->db->get('t_news')->result_array();
+        $page_data['t_news'] = $this->db->get_where('t_news',array('Type'=>'News'))->result_array();
+        $page_data['t_staff'] = $this->db->get('t_staff')->result_array();
+        $page_data['t_aboutus'] = $this->db->get('t_aboutus')->row();
+        $page_data['t_events'] = $this->db->get_where('t_news',array('Type'=>'Announcement'))->result_array();
         $this->load->view('web/index', $page_data);
     }
     function loadpage($param1="",$param2=""){

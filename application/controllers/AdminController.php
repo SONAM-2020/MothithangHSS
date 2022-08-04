@@ -27,6 +27,9 @@ class AdminController extends CI_Controller {
         if($param1=="addnews"){
             $this->load->view('admin/pages/addnews', $page_data);
         }
+        if($param1=="Guidelines"){
+            $this->load->view('admin/pages/Guidelines', $page_data);
+        }
         if($param1=="rules"){
             $page_data['t_files'] = $this->db->get('t_files')->result_array();
             $this->load->view('admin/pages/rules', $page_data);
@@ -49,6 +52,8 @@ class AdminController extends CI_Controller {
             $this->load->view('admin/pages/aboutschool', $page_data);
         }
         if($param1=="staff"){
+            $page_data['t_post'] = $this->db->get('t_post_type')->result_array();
+            $page_data['t_department'] = $this->db->get('t_department_type')->result_array();
          $page_data['t_staff'] = $this->db->get('t_staff')->result_array();
             $this->load->view('admin/pages/staff', $page_data);
         }
@@ -279,6 +284,8 @@ class AdminController extends CI_Controller {
         else{
             $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create Staff. Please Try Again!";
         }
+        $page_data['t_post'] = $this->db->get('t_post_type')->result_array();
+        $page_data['t_department'] = $this->db->get('t_department_type')->result_array();
         $page_data['t_staff'] = $this->db->get('t_staff')->result_array();
         $this->load->view('admin/pages/staff', $page_data); 
     }
@@ -415,6 +422,8 @@ function editingnews(){
         else{
             $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete Staff. Please Try Again!";
         }
+        $page_data['t_post'] = $this->db->get('t_post_type')->result_array();
+            $page_data['t_department'] = $this->db->get('t_department_type')->result_array();
         $page_data['t_staff'] = $this->db->get('t_staff')->result_array();
         $this->load->view('admin/pages/staff', $page_data); 
         }
@@ -456,7 +465,7 @@ function editingnews(){
         $this->session->unset_userdata(0);
         $this->session->sess_destroy();
         $this->session->set_flashdata('logout_notification', 'logged_out');
-        redirect(base_url().'index.php?adminController/login', 'refresh');
+        redirect(base_url().'index.php?baseController/', 'refresh');
     }
 
 }

@@ -49,13 +49,13 @@
                     <div class="form-group">
                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <label>Vision:</label>
-                          <textarea type="text" id="Vision1" name="Vision1"  class="form-control summernote"><?=$t_aboutus->Vision;?></textarea>
+                          <input type="text" id="Vision1" name="Vision1" value="<?=$t_aboutus->Vision;?>" class="form-control" >
                         </div>
                     </div>
                     <div class="form-group">
                       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                           <label>Mission:</label>
-                          <textarea type="text" id="Mission1" name="Mission1"  class="form-control summernote"><?=$t_aboutus->Mission;?></textarea>
+                          <input type="text" id="Mission1" name="Mission1" value="<?=$t_aboutus->Mission;?>" class="form-control" >
                         </div>
                     </div>
                     <div class="form-group">
