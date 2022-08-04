@@ -250,6 +250,39 @@ class AdminController extends CI_Controller {
         }
         $this->load->view('admin/pages/topper', $page_data); 
     }
+
+    function addingstaff(){
+        $data['Name']=$this->input->post('name');
+        $data['Year']=$this->input->post('year');
+        $data['Department']=$this->input->post('department');
+        $data['Qualification']=$this->input->post('qualification');
+        $data['Email']=$this->input->post('email');
+        $data['Phone']=$this->input->post('phone');
+        $data['Post']=$this->input->post('post');
+        $data['Serving_tenure']=$this->input->post('serving');
+        $data['Status']='Active';
+        $new_file_name = $_FILES["Image"]["name"];
+        $file_directory = "uploads/Staff/";
+        if(!is_dir($file_directory)){
+            mkdir($file_directory,0777,TRUE);
+        }
+        if($new_file_name!=""){
+          move_uploaded_file($_FILES["Image"]["tmp_name"], $file_directory . $new_file_name);
+          $data['image']=$file_directory . $new_file_name;
+        }
+         
+        $this->CommonModel->do_insert('t_staff', $data);
+         
+         if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>Staff has been successfully Created</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to create Staff. Please Try Again!";
+        }
+        $page_data['t_staff'] = $this->db->get('t_staff')->result_array();
+        $this->load->view('admin/pages/staff', $page_data); 
+    }
+
     
     function addingevents(){
         $data['Name']=$this->input->post('Name');
@@ -368,6 +401,22 @@ function editingnews(){
         }
         $page_data['t_news'] = $this->db->get('t_news')->result_array();
         $this->load->view('admin/pages/newslist', $page_data); 
+        }
+        
+
+    function deletingstaff($productid="",$page=""){ 
+        $page_data['message']="";
+        $page_data['messagefail']="";
+        $this->db->where('Id', $productid);
+        $this->db->delete('t_staff');
+        if($this->db->affected_rows()>0){
+            $page_data['message']="<div class='alert alert-success alert-dismissible'>Staff has been deleted successfully</div>";
+        }
+        else{
+            $page_data['messagefail']="<div class='alert alert-danger alert-dismissible'>Unable to delete Staff. Please Try Again!";
+        }
+        $page_data['t_staff'] = $this->db->get('t_staff')->result_array();
+        $this->load->view('admin/pages/staff', $page_data); 
         }
 
     function UpdateUserDetails(){

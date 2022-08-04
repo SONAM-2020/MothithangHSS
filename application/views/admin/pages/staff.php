@@ -125,13 +125,36 @@
                             <input type="text" id="qualification" name="qualification" class="form-control">
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                          <label>Topper Type:<span class="text-danger">*</span></label>
-                          <select id="type" class="form-control" name="type">
-                            <option value="">Select Topper Type</option>
-                            <option value="BCSE">BCSE</option>
-                            <option value="BHSEC">BHSEC</option>
-                            <option value="Academic Topper">Academic Topper</option>
+                          <label>Email:<span class="text-danger">*</span></label>
+                            <input type="text" id="email" name="email" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <label>Phone:<span class="text-danger">*</span></label>
+                            <input type="text" id="phone" name="phone" class="form-control">
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <label>Post:<span class="text-danger">*</span></label>
+                            <select id="post" class="form-control" name="post">
+                            <option value="">Select Department</option>
+                            <option value="School Management Board">School Management Board</option>
+                            <option value="Dzongkha Department">Dzongkha Department</option>
+                            <option value="English Department">English Department</option>
+                            <option value="Mathematics/IT Department">Mathematics/IT Department</option>
+                            <option value="Science Department">Science Department</option>
+                            <option value="Commerce/Economics/Accountancy Department">Commerce/Economics/Accountancy Department</option>
+                            <option value="Humanities & Others' Department">Humanities & Others' Department</option>
+                            <option value="Supporting Staff">Supporting Staff</option>
+                            <option value="Principals">Principals</option>
                           </select>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                          <label>Serving Tenure:<span class="text-danger">*</span></label>
+                            <input type="text" id="serving" name="serving" class="form-control">
+                        </div>
                         </div>
                       </div>
                   </div>
@@ -154,11 +177,11 @@
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
+      'lengthChange': true,
+      'searching'   : true,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : false
+      'autoWidth'   : true
     })
   })
  function addinfo(){
